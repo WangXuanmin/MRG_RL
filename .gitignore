@@ -1,0 +1,35 @@
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and local editor files
+.venv/
+venv/
+env/
+.DS_Store
+.idea/
+.vscode/
+
+# Large model/checkpoint artifacts
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+checkpoints/
+resources/models/
+
+# Raw image datasets and generated image caches
+data/**/images/
+images/
+*.png
+*.jpg
+*.jpeg
+
+# Experiment runtime caches
+wandb/
+lightning_logs/
+*.log.tmp

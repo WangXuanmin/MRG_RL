@@ -1,0 +1,27 @@
+{
+  "source": "data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json",
+  "output": "data/iu_xray/annotation_rag_top20_number_cw1.json",
+  "train_rank_histogram_zero_based": {
+    "0": 168,
+    "1": 147,
+    "2": 175,
+    "3": 174,
+    "4": 164,
+    "5": 140,
+    "6": 149,
+    "7": 122,
+    "8": 169,
+    "9": 156,
+    "10": 150,
+    "11": 151,
+    "12": 150,
+    "13": 141,
+    "14": 163,
+    "15": 166,
+    "16": 135,
+    "17": 143,
+    "18": 165,
+    "19": 134
+  },
+  "train_size": 3062
+}

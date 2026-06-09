@@ -1,0 +1,691 @@
+{'accelerator': 'gpu',
+ 'accumulate_grad_batches': 1,
+ 'annotation': 'data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json',
+ 'base_dir': 'data/iu_xray/images',
+ 'batch_size': 1,
+ 'beam_size': 3,
+ 'ckpt_file': None,
+ 'dataset': 'iu_xray',
+ 'delta_file': 'save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth',
+ 'devices': 8,
+ 'diversity_penalty': 0,
+ 'do_sample': False,
+ 'dpo_average_logps': True,
+ 'dpo_beta': 0.1,
+ 'dpo_objective': 'pairwise',
+ 'dpo_require_ref_logps': False,
+ 'dpo_sft_loss_weight': 0.0,
+ 'end_sym': '<|im_end|>',
+ 'every_n_train_steps': 0,
+ 'freeze_llm': False,
+ 'freeze_vm': True,
+ 'global_only': False,
+ 'gradient_clip_val': None,
+ 'learning_rate': 2e-05,
+ 'length_penalty': 2.0,
+ 'limit_test_batches': 1.0,
+ 'limit_train_batches': 1.0,
+ 'limit_val_batches': 0.0,
+ 'llama_model': None,
+ 'llm_alpha': 32,
+ 'llm_lora_target_modules': 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj',
+ 'llm_model': 'resources/models/Qwen3-8B',
+ 'llm_r': 16,
+ 'llm_use_lora': True,
+ 'lora_dropout': 0.1,
+ 'low_resource': False,
+ 'max_epochs': 2,
+ 'max_length': 160,
+ 'max_new_tokens': 160,
+ 'min_new_tokens': 40,
+ 'no_repeat_ngram_size': 2,
+ 'num_beam_groups': 1,
+ 'num_nodes': 1,
+ 'num_sanity_val_steps': 0,
+ 'num_workers': 4,
+ 'precision': 'bf16-mixed',
+ 'preference_file': None,
+ 'prefetch_factor': 4,
+ 'prompt': 'Generate a comprehensive and detailed diagnosis report for this '
+           'chest X-ray image.',
+ 'repetition_penalty': 2.0,
+ 'resampler_dropout': 0.0,
+ 'resampler_num_heads': 8,
+ 'resampler_num_layers': 2,
+ 'resampler_num_queries': 32,
+ 'savedmodel_path': 'save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5',
+ 'scorer_types': ['Bleu_4', 'CIDEr'],
+ 'stage': 'sft',
+ 'strategy': 'ddp',
+ 'temperature': 0,
+ 'test': False,
+ 'test_batch_size': 16,
+ 'val_batch_size': 1,
+ 'val_check_interval': 1.0,
+ 'validate': False,
+ 'vis_alpha': 16,
+ 'vis_r': 16,
+ 'vis_use_lora': False,
+ 'vision_model': 'resources/models/facebook_dinov2-base',
+ 'weights': [0.5, 0.5]}
+Seed set to 42
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+`Trainer(limit_train_batches=1.0)` was configured so 100% of the batches per epoch will be used..
+`Trainer(limit_test_batches=1.0)` was configured so 100% of the batches will be used..
+`Trainer(val_check_interval=1.0)` was configured so validation will run at the end of the training epoch..
+Loading vision encoder: resources/models/facebook_dinov2-base
+Vision encoder frozen
+Loading language model: resources/models/Qwen3-8B
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 60.30it/s]
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+Load checkpoint from save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth
+You are using a CUDA device ('NVIDIA A100-SXM4-80GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+[rank: 2] Seed set to 42
+[rank: 1] Seed set to 42
+[rank: 6] Seed set to 42
+[rank: 3] Seed set to 42
+[rank: 7] Seed set to 42
+[rank: 5] Seed set to 42
+[rank: 4] Seed set to 42
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+{'accelerator': 'gpu',
+ 'accumulate_grad_batches': 1,
+ 'annotation': 'data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json',
+ 'base_dir': 'data/iu_xray/images',
+ 'batch_size': 1,
+ 'beam_size': 3,
+ 'ckpt_file': None,
+ 'dataset': 'iu_xray',
+ 'delta_file': 'save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth',
+ 'devices': 8,
+ 'diversity_penalty': 0,
+ 'do_sample': False,
+ 'dpo_average_logps': True,
+ 'dpo_beta': 0.1,
+ 'dpo_objective': 'pairwise',
+ 'dpo_require_ref_logps': False,
+ 'dpo_sft_loss_weight': 0.0,
+ 'end_sym': '<|im_end|>',
+ 'every_n_train_steps': 0,
+ 'freeze_llm': False,
+ 'freeze_vm': True,
+ 'global_only': False,
+ 'gradient_clip_val': None,
+ 'learning_rate': 2e-05,
+ 'length_penalty': 2.0,
+ 'limit_test_batches': 1.0,
+ 'limit_train_batches': 1.0,
+ 'limit_val_batches': 0.0,
+ 'llama_model': None,
+ 'llm_alpha': 32,
+ 'llm_lora_target_modules': 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj',
+ 'llm_model': 'resources/models/Qwen3-8B',
+ 'llm_r': 16,
+ 'llm_use_lora': True,
+ 'lora_dropout': 0.1,
+ 'low_resource': False,
+ 'max_epochs': 2,
+ 'max_length': 160,
+ 'max_new_tokens': 160,
+ 'min_new_tokens': 40,
+ 'no_repeat_ngram_size': 2,
+ 'num_beam_groups': 1,
+ 'num_nodes': 1,
+ 'num_sanity_val_steps': 0,
+ 'num_workers': 4,
+ 'precision': 'bf16-mixed',
+ 'preference_file': None,
+ 'prefetch_factor': 4,
+ 'prompt': 'Generate a comprehensive and detailed diagnosis report for this '
+           'chest X-ray image.',
+ 'repetition_penalty': 2.0,
+ 'resampler_dropout': 0.0,
+ 'resampler_num_heads': 8,
+ 'resampler_num_layers': 2,
+ 'resampler_num_queries': 32,
+ 'savedmodel_path': 'save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5',
+ 'scorer_types': ['Bleu_4', 'CIDEr'],
+ 'stage': 'sft',
+ 'strategy': 'ddp',
+ 'temperature': 0,
+ 'test': False,
+ 'test_batch_size': 16,
+ 'val_batch_size': 1,
+ 'val_check_interval': 1.0,
+ 'validate': False,
+ 'vis_alpha': 16,
+ 'vis_r': 16,
+ 'vis_use_lora': False,
+ 'vision_model': 'resources/models/facebook_dinov2-base',
+ 'weights': [0.5, 0.5]}
+Loading vision encoder: resources/models/facebook_dinov2-base
+Vision encoder frozen
+Loading language model: resources/models/Qwen3-8B
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]{'accelerator': 'gpu',
+ 'accumulate_grad_batches': 1,
+ 'annotation': 'data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json',
+ 'base_dir': 'data/iu_xray/images',
+ 'batch_size': 1,
+ 'beam_size': 3,
+ 'ckpt_file': None,
+ 'dataset': 'iu_xray',
+ 'delta_file': 'save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth',
+ 'devices': 8,
+ 'diversity_penalty': 0,
+ 'do_sample': False,
+ 'dpo_average_logps': True,
+ 'dpo_beta': 0.1,
+ 'dpo_objective': 'pairwise',
+ 'dpo_require_ref_logps': False,
+ 'dpo_sft_loss_weight': 0.0,
+ 'end_sym': '<|im_end|>',
+ 'every_n_train_steps': 0,
+ 'freeze_llm': False,
+ 'freeze_vm': True,
+ 'global_only': False,
+ 'gradient_clip_val': None,
+ 'learning_rate': 2e-05,
+ 'length_penalty': 2.0,
+ 'limit_test_batches': 1.0,
+ 'limit_train_batches': 1.0,
+ 'limit_val_batches': 0.0,
+ 'llama_model': None,
+ 'llm_alpha': 32,
+ 'llm_lora_target_modules': 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj',
+ 'llm_model': 'resources/models/Qwen3-8B',
+ 'llm_r': 16,
+ 'llm_use_lora': True,
+ 'lora_dropout': 0.1,
+ 'low_resource': False,
+ 'max_epochs': 2,
+ 'max_length': 160,
+ 'max_new_tokens': 160,
+ 'min_new_tokens': 40,
+ 'no_repeat_ngram_size': 2,
+ 'num_beam_groups': 1,
+ 'num_nodes': 1,
+ 'num_sanity_val_steps': 0,
+ 'num_workers': 4,
+ 'precision': 'bf16-mixed',
+ 'preference_file': None,
+ 'prefetch_factor': 4,
+ 'prompt': 'Generate a comprehensive and detailed diagnosis report for this '
+           'chest X-ray image.',
+ 'repetition_penalty': 2.0,
+ 'resampler_dropout': 0.0,
+ 'resampler_num_heads': 8,
+ 'resampler_num_layers': 2,
+ 'resampler_num_queries': 32,
+ 'savedmodel_path': 'save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5',
+ 'scorer_types': ['Bleu_4', 'CIDEr'],
+ 'stage': 'sft',
+ 'strategy': 'ddp',
+ 'temperature': 0,
+ 'test': False,
+ 'test_batch_size': 16,
+ 'val_batch_size': 1,
+ 'val_check_interval': 1.0,
+ 'validate': False,
+ 'vis_alpha': 16,
+ 'vis_r': 16,
+ 'vis_use_lora': False,
+ 'vision_model': 'resources/models/facebook_dinov2-base',
+ 'weights': [0.5, 0.5]}
+Loading vision encoder: resources/models/facebook_dinov2-base
+Vision encoder frozen
+Loading language model: resources/models/Qwen3-8B
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]{'accelerator': 'gpu',
+ 'accumulate_grad_batches': 1,
+ 'annotation': 'data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json',
+ 'base_dir': 'data/iu_xray/images',
+ 'batch_size': 1,
+ 'beam_size': 3,
+ 'ckpt_file': None,
+ 'dataset': 'iu_xray',
+ 'delta_file': 'save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth',
+ 'devices': 8,
+ 'diversity_penalty': 0,
+ 'do_sample': False,
+ 'dpo_average_logps': True,
+ 'dpo_beta': 0.1,
+ 'dpo_objective': 'pairwise',
+ 'dpo_require_ref_logps': False,
+ 'dpo_sft_loss_weight': 0.0,
+ 'end_sym': '<|im_end|>',
+ 'every_n_train_steps': 0,
+ 'freeze_llm': False,
+ 'freeze_vm': True,
+ 'global_only': False,
+ 'gradient_clip_val': None,
+ 'learning_rate': 2e-05,
+ 'length_penalty': 2.0,
+ 'limit_test_batches': 1.0,
+ 'limit_train_batches': 1.0,
+ 'limit_val_batches': 0.0,
+ 'llama_model': None,
+ 'llm_alpha': 32,
+ 'llm_lora_target_modules': 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj',
+ 'llm_model': 'resources/models/Qwen3-8B',
+ 'llm_r': 16,
+ 'llm_use_lora': True,
+ 'lora_dropout': 0.1,
+ 'low_resource': False,
+ 'max_epochs': 2,
+ 'max_length': 160,
+ 'max_new_tokens': 160,
+ 'min_new_tokens': 40,
+ 'no_repeat_ngram_size': 2,
+ 'num_beam_groups': 1,
+ 'num_nodes': 1,
+ 'num_sanity_val_steps': 0,
+ 'num_workers': 4,
+ 'precision': 'bf16-mixed',
+ 'preference_file': None,
+ 'prefetch_factor': 4,
+ 'prompt': 'Generate a comprehensive and detailed diagnosis report for this '
+           'chest X-ray image.',
+ 'repetition_penalty': 2.0,
+ 'resampler_dropout': 0.0,
+ 'resampler_num_heads': 8,
+ 'resampler_num_layers': 2,
+ 'resampler_num_queries': 32,
+ 'savedmodel_path': 'save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5',
+ 'scorer_types': ['Bleu_4', 'CIDEr'],
+ 'stage': 'sft',
+ 'strategy': 'ddp',
+ 'temperature': 0,
+ 'test': False,
+ 'test_batch_size': 16,
+ 'val_batch_size': 1,
+ 'val_check_interval': 1.0,
+ 'validate': False,
+ 'vis_alpha': 16,
+ 'vis_r': 16,
+ 'vis_use_lora': False,
+ 'vision_model': 'resources/models/facebook_dinov2-base',
+ 'weights': [0.5, 0.5]}
+Loading vision encoder: resources/models/facebook_dinov2-base
+Vision encoder frozen
+Loading language model: resources/models/Qwen3-8B
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]{'accelerator': 'gpu',
+ 'accumulate_grad_batches': 1,
+ 'annotation': 'data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json',
+ 'base_dir': 'data/iu_xray/images',
+ 'batch_size': 1,
+ 'beam_size': 3,
+ 'ckpt_file': None,
+ 'dataset': 'iu_xray',
+ 'delta_file': 'save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth',
+ 'devices': 8,
+ 'diversity_penalty': 0,
+ 'do_sample': False,
+ 'dpo_average_logps': True,
+ 'dpo_beta': 0.1,
+ 'dpo_objective': 'pairwise',
+ 'dpo_require_ref_logps': False,
+ 'dpo_sft_loss_weight': 0.0,
+ 'end_sym': '<|im_end|>',
+ 'every_n_train_steps': 0,
+ 'freeze_llm': False,
+ 'freeze_vm': True,
+ 'global_only': False,
+ 'gradient_clip_val': None,
+ 'learning_rate': 2e-05,
+ 'length_penalty': 2.0,
+ 'limit_test_batches': 1.0,
+ 'limit_train_batches': 1.0,
+ 'limit_val_batches': 0.0,
+ 'llama_model': None,
+ 'llm_alpha': 32,
+ 'llm_lora_target_modules': 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj',
+ 'llm_model': 'resources/models/Qwen3-8B',
+ 'llm_r': 16,
+ 'llm_use_lora': True,
+ 'lora_dropout': 0.1,
+ 'low_resource': False,
+ 'max_epochs': 2,
+ 'max_length': 160,
+ 'max_new_tokens': 160,
+ 'min_new_tokens': 40,
+ 'no_repeat_ngram_size': 2,
+ 'num_beam_groups': 1,
+ 'num_nodes': 1,
+ 'num_sanity_val_steps': 0,
+ 'num_workers': 4,
+ 'precision': 'bf16-mixed',
+ 'preference_file': None,
+ 'prefetch_factor': 4,
+ 'prompt': 'Generate a comprehensive and detailed diagnosis report for this '
+           'chest X-ray image.',
+ 'repetition_penalty': 2.0,
+ 'resampler_dropout': 0.0,
+ 'resampler_num_heads': 8,
+ 'resampler_num_layers': 2,
+ 'resampler_num_queries': 32,
+ 'savedmodel_path': 'save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5',
+ 'scorer_types': ['Bleu_4', 'CIDEr'],
+ 'stage': 'sft',
+ 'strategy': 'ddp',
+ 'temperature': 0,
+ 'test': False,
+ 'test_batch_size': 16,
+ 'val_batch_size': 1,
+ 'val_check_interval': 1.0,
+ 'validate': False,
+ 'vis_alpha': 16,
+ 'vis_r': 16,
+ 'vis_use_lora': False,
+ 'vision_model': 'resources/models/facebook_dinov2-base',
+ 'weights': [0.5, 0.5]}
+Loading vision encoder: resources/models/facebook_dinov2-base
+Vision encoder frozen
+Loading language model: resources/models/Qwen3-8B
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 78.90it/s]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 69.56it/s]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 74.53it/s]
+{'accelerator': 'gpu',
+ 'accumulate_grad_batches': 1,
+ 'annotation': 'data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json',
+ 'base_dir': 'data/iu_xray/images',
+ 'batch_size': 1,
+ 'beam_size': 3,
+ 'ckpt_file': None,
+ 'dataset': 'iu_xray',
+ 'delta_file': 'save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth',
+ 'devices': 8,
+ 'diversity_penalty': 0,
+ 'do_sample': False,
+ 'dpo_average_logps': True,
+ 'dpo_beta': 0.1,
+ 'dpo_objective': 'pairwise',
+ 'dpo_require_ref_logps': False,
+ 'dpo_sft_loss_weight': 0.0,
+ 'end_sym': '<|im_end|>',
+ 'every_n_train_steps': 0,
+ 'freeze_llm': False,
+ 'freeze_vm': True,
+ 'global_only': False,
+ 'gradient_clip_val': None,
+ 'learning_rate': 2e-05,
+ 'length_penalty': 2.0,
+ 'limit_test_batches': 1.0,
+ 'limit_train_batches': 1.0,
+ 'limit_val_batches': 0.0,
+ 'llama_model': None,
+ 'llm_alpha': 32,
+ 'llm_lora_target_modules': 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj',
+ 'llm_model': 'resources/models/Qwen3-8B',
+ 'llm_r': 16,
+ 'llm_use_lora': True,
+ 'lora_dropout': 0.1,
+ 'low_resource': False,
+ 'max_epochs': 2,
+ 'max_length': 160,
+ 'max_new_tokens': 160,
+ 'min_new_tokens': 40,
+ 'no_repeat_ngram_size': 2,
+ 'num_beam_groups': 1,
+ 'num_nodes': 1,
+ 'num_sanity_val_steps': 0,
+ 'num_workers': 4,
+ 'precision': 'bf16-mixed',
+ 'preference_file': None,
+ 'prefetch_factor': 4,
+ 'prompt': 'Generate a comprehensive and detailed diagnosis report for this '
+           'chest X-ray image.',
+ 'repetition_penalty': 2.0,
+ 'resampler_dropout': 0.0,
+ 'resampler_num_heads': 8,
+ 'resampler_num_layers': 2,
+ 'resampler_num_queries': 32,
+ 'savedmodel_path': 'save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5',
+ 'scorer_types': ['Bleu_4', 'CIDEr'],
+ 'stage': 'sft',
+ 'strategy': 'ddp',
+ 'temperature': 0,
+ 'test': False,
+ 'test_batch_size': 16,
+ 'val_batch_size': 1,
+ 'val_check_interval': 1.0,
+ 'validate': False,
+ 'vis_alpha': 16,
+ 'vis_r': 16,
+ 'vis_use_lora': False,
+ 'vision_model': 'resources/models/facebook_dinov2-base',
+ 'weights': [0.5, 0.5]}
+Loading vision encoder: resources/models/facebook_dinov2-base
+Vision encoder frozen
+Loading language model: resources/models/Qwen3-8B
+{'accelerator': 'gpu',
+ 'accumulate_grad_batches': 1,
+ 'annotation': 'data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json',
+ 'base_dir': 'data/iu_xray/images',
+ 'batch_size': 1,
+ 'beam_size': 3,
+ 'ckpt_file': None,
+ 'dataset': 'iu_xray',
+ 'delta_file': 'save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth',
+ 'devices': 8,
+ 'diversity_penalty': 0,
+ 'do_sample': False,
+ 'dpo_average_logps': True,
+ 'dpo_beta': 0.1,
+ 'dpo_objective': 'pairwise',
+ 'dpo_require_ref_logps': False,
+ 'dpo_sft_loss_weight': 0.0,
+ 'end_sym': '<|im_end|>',
+ 'every_n_train_steps': 0,
+ 'freeze_llm': False,
+ 'freeze_vm': True,
+ 'global_only': False,
+ 'gradient_clip_val': None,
+ 'learning_rate': 2e-05,
+ 'length_penalty': 2.0,
+ 'limit_test_batches': 1.0,
+ 'limit_train_batches': 1.0,
+ 'limit_val_batches': 0.0,
+ 'llama_model': None,
+ 'llm_alpha': 32,
+ 'llm_lora_target_modules': 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj',
+ 'llm_model': 'resources/models/Qwen3-8B',
+ 'llm_r': 16,
+ 'llm_use_lora': True,
+ 'lora_dropout': 0.1,
+ 'low_resource': False,
+ 'max_epochs': 2,
+ 'max_length': 160,
+ 'max_new_tokens': 160,
+ 'min_new_tokens': 40,
+ 'no_repeat_ngram_size': 2,
+ 'num_beam_groups': 1,
+ 'num_nodes': 1,
+ 'num_sanity_val_steps': 0,
+ 'num_workers': 4,
+ 'precision': 'bf16-mixed',
+ 'preference_file': None,
+ 'prefetch_factor': 4,
+ 'prompt': 'Generate a comprehensive and detailed diagnosis report for this '
+           'chest X-ray image.',
+ 'repetition_penalty': 2.0,
+ 'resampler_dropout': 0.0,
+ 'resampler_num_heads': 8,
+ 'resampler_num_layers': 2,
+ 'resampler_num_queries': 32,
+ 'savedmodel_path': 'save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5',
+ 'scorer_types': ['Bleu_4', 'CIDEr'],
+ 'stage': 'sft',
+ 'strategy': 'ddp',
+ 'temperature': 0,
+ 'test': False,
+ 'test_batch_size': 16,
+ 'val_batch_size': 1,
+ 'val_check_interval': 1.0,
+ 'validate': False,
+ 'vis_alpha': 16,
+ 'vis_r': 16,
+ 'vis_use_lora': False,
+ 'vision_model': 'resources/models/facebook_dinov2-base',
+ 'weights': [0.5, 0.5]}
+Loading vision encoder: resources/models/facebook_dinov2-base
+Vision encoder frozen
+Loading language model: resources/models/Qwen3-8B
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]{'accelerator': 'gpu',
+ 'accumulate_grad_batches': 1,
+ 'annotation': 'data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json',
+ 'base_dir': 'data/iu_xray/images',
+ 'batch_size': 1,
+ 'beam_size': 3,
+ 'ckpt_file': None,
+ 'dataset': 'iu_xray',
+ 'delta_file': 'save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth',
+ 'devices': 8,
+ 'diversity_penalty': 0,
+ 'do_sample': False,
+ 'dpo_average_logps': True,
+ 'dpo_beta': 0.1,
+ 'dpo_objective': 'pairwise',
+ 'dpo_require_ref_logps': False,
+ 'dpo_sft_loss_weight': 0.0,
+ 'end_sym': '<|im_end|>',
+ 'every_n_train_steps': 0,
+ 'freeze_llm': False,
+ 'freeze_vm': True,
+ 'global_only': False,
+ 'gradient_clip_val': None,
+ 'learning_rate': 2e-05,
+ 'length_penalty': 2.0,
+ 'limit_test_batches': 1.0,
+ 'limit_train_batches': 1.0,
+ 'limit_val_batches': 0.0,
+ 'llama_model': None,
+ 'llm_alpha': 32,
+ 'llm_lora_target_modules': 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj',
+ 'llm_model': 'resources/models/Qwen3-8B',
+ 'llm_r': 16,
+ 'llm_use_lora': True,
+ 'lora_dropout': 0.1,
+ 'low_resource': False,
+ 'max_epochs': 2,
+ 'max_length': 160,
+ 'max_new_tokens': 160,
+ 'min_new_tokens': 40,
+ 'no_repeat_ngram_size': 2,
+ 'num_beam_groups': 1,
+ 'num_nodes': 1,
+ 'num_sanity_val_steps': 0,
+ 'num_workers': 4,
+ 'precision': 'bf16-mixed',
+ 'preference_file': None,
+ 'prefetch_factor': 4,
+ 'prompt': 'Generate a comprehensive and detailed diagnosis report for this '
+           'chest X-ray image.',
+ 'repetition_penalty': 2.0,
+ 'resampler_dropout': 0.0,
+ 'resampler_num_heads': 8,
+ 'resampler_num_layers': 2,
+ 'resampler_num_queries': 32,
+ 'savedmodel_path': 'save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5',
+ 'scorer_types': ['Bleu_4', 'CIDEr'],
+ 'stage': 'sft',
+ 'strategy': 'ddp',
+ 'temperature': 0,
+ 'test': False,
+ 'test_batch_size': 16,
+ 'val_batch_size': 1,
+ 'val_check_interval': 1.0,
+ 'validate': False,
+ 'vis_alpha': 16,
+ 'vis_r': 16,
+ 'vis_use_lora': False,
+ 'vision_model': 'resources/models/facebook_dinov2-base',
+ 'weights': [0.5, 0.5]}
+Loading vision encoder: resources/models/facebook_dinov2-base
+Vision encoder frozen
+Loading language model: resources/models/Qwen3-8B
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 60.15it/s]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 97.31it/s]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 97.09it/s]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 96.78it/s]
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+LOCAL_RANK: 4 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 7 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 1 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 5 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 2 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 6 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+LOCAL_RANK: 3 - CUDA_VISIBLE_DEVICES: [0,1,2,3,4,5,6,7]
+/usr/local/lib/python3.12/dist-packages/pytorch_lightning/utilities/model_summary/model_summary.py:242: Precision bf16-mixed is not supported by the model summary.  Estimated model size in MB will not be accurate. Using 32 bits instead.
+┏━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name           ┃ Type                 ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ visual_encoder │ Dinov2Model          │ 86.6 M │ eval  │     0 │
+│ 1 │ llm            │ PeftModelForCausalLM │  8.2 B │ train │     0 │
+│ 2 │ embed_tokens   │ Embedding            │  622 M │ eval  │     0 │
+│ 3 │ resampler      │ PerceiverResampler   │  406 M │ train │     0 │
+│ 4 │ visual_norm    │ LayerNorm            │  8.2 K │ train │     0 │
+└───┴────────────────┴──────────────────────┴────────┴───────┴───────┘
+Trainable params: 449 M                                                         
+Non-trainable params: 8.3 B                                                     
+Total params: 8.7 B                                                             
+Total estimated model params size (MB): 34,908.145                              
+Modules in train mode: 2549                                                     
+Modules in eval mode: 771                                                       
+Total FLOPs: 0                                                                  
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+Load checkpoint from save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+Load checkpoint from save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+Load checkpoint from save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+Load checkpoint from save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+Load checkpoint from save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+Load checkpoint from save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+Load checkpoint from save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth
+/usr/local/lib/python3.12/dist-packages/pytorch_lightning/loops/fit_loop.py:538: Found 771 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+Saving train checkpoint at step 383 to save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5/checkpoints/checkpoint_epoch0_step383_train.pth.
+Saving train checkpoint at step 766 to save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5/checkpoints/checkpoint_epoch1_step766_train.pth.
+`Trainer.fit` stopped: `max_epochs=2` reached.
+Epoch 1/1  ━━━━━━━━━━━━━━━━━━━━━━ 383/383 0:04:15 • 0:00:00 1.51it/s loss: 0.058

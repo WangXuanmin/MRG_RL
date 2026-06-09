@@ -1,0 +1,51 @@
+{
+  "manual_template_test": {
+    "Bleu_4": 0.18241313606316437,
+    "ROUGE_L": 0.40007036081851793,
+    "chexbert_micro_f1": 0.0,
+    "chexbert_micro_precision": 0.0,
+    "chexbert_micro_recall": 0.0,
+    "chexbert_macro_f1": 0.0,
+    "radgraph_rg_e": 0.4290341359271968,
+    "radgraph_rg_er": 0.3965455126504445,
+    "radgraph_rg_bar_er": 0.3167083351904145
+  },
+  "rag_top5_oracle_test_upper_bound": {
+    "Bleu_4": 0.20683099746356454,
+    "ROUGE_L": 0.4144141590850241,
+    "chexbert_micro_f1": 0.3653543307086614,
+    "chexbert_micro_precision": 0.39057239057239057,
+    "chexbert_micro_recall": 0.3431952662721893,
+    "chexbert_macro_f1": 0.12259579539192392,
+    "radgraph_rg_e": 0.4042429995752577,
+    "radgraph_rg_er": 0.3611351745456156,
+    "radgraph_rg_bar_er": 0.3052640531557536
+  },
+  "template_refinement_best": {
+    "kind": "fixed",
+    "name": "baseline",
+    "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+    "val": {
+      "Bleu_1": 0.4927859676942909,
+      "Bleu_2": 0.35034681211219315,
+      "Bleu_3": 0.2557246653839098,
+      "Bleu_4": 0.19162745348902563,
+      "ROUGE_L": 0.4113605842344592,
+      "B4_Rouge": 0.6029880377234849,
+      "unique_outputs": 1,
+      "name": "val_fixed_baseline"
+    },
+    "test": {
+      "Bleu_1": 0.4926032662920791,
+      "Bleu_2": 0.3450899138765263,
+      "Bleu_3": 0.24799305831259186,
+      "Bleu_4": 0.18241313606316437,
+      "ROUGE_L": 0.40007036081851793,
+      "B4_Rouge": 0.5824834968816823,
+      "unique_outputs": 1,
+      "name": "test_baseline",
+      "non_decrease_vs_baseline": true,
+      "target_b4_pass": false
+    }
+  }
+}

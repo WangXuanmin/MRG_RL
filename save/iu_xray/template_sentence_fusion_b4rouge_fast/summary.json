@@ -1,0 +1,415 @@
+{
+  "best_val": {
+    "score": 0.5286382220145468,
+    "metrics": {
+      "Bleu_4": 0.1500828507296191,
+      "ROUGE_L": 0.37855537128492767,
+      "B4_Rouge": 0.5286382220145468
+    },
+    "cfg": {
+      "base_id": "1429",
+      "topk": 5,
+      "num_extra": 1,
+      "w_freq": 0.8,
+      "w_rank": 0.8,
+      "w_pos": 0.1,
+      "placement": "before_impression",
+      "min_words": 4,
+      "max_words": 16
+    }
+  },
+  "top_val": [
+    {
+      "score": 0.5286382220145468,
+      "metrics": {
+        "Bleu_4": 0.1500828507296191,
+        "ROUGE_L": 0.37855537128492767,
+        "B4_Rouge": 0.5286382220145468
+      },
+      "cfg": {
+        "base_id": "1429",
+        "topk": 5,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5285157650996004,
+      "metrics": {
+        "Bleu_4": 0.15086658977546416,
+        "ROUGE_L": 0.3776491753241362,
+        "B4_Rouge": 0.5285157650996004
+      },
+      "cfg": {
+        "base_id": "1429",
+        "topk": 3,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5275968872650827,
+      "metrics": {
+        "Bleu_4": 0.17277585775345117,
+        "ROUGE_L": 0.3548210295116315,
+        "B4_Rouge": 0.5275968872650827
+      },
+      "cfg": {
+        "base_id": "90",
+        "topk": 5,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5215784979211192,
+      "metrics": {
+        "Bleu_4": 0.14947009831369726,
+        "ROUGE_L": 0.3721083996074219,
+        "B4_Rouge": 0.5215784979211192
+      },
+      "cfg": {
+        "base_id": "2792",
+        "topk": 5,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.520547744326224,
+      "metrics": {
+        "Bleu_4": 0.14927303041797932,
+        "ROUGE_L": 0.3712747139082446,
+        "B4_Rouge": 0.520547744326224
+      },
+      "cfg": {
+        "base_id": "2792",
+        "topk": 3,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5204956592151048,
+      "metrics": {
+        "Bleu_4": 0.16877424590809595,
+        "ROUGE_L": 0.3517214133070088,
+        "B4_Rouge": 0.5204956592151048
+      },
+      "cfg": {
+        "base_id": "90",
+        "topk": 3,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5192132873917045,
+      "metrics": {
+        "Bleu_4": 0.14979967086399074,
+        "ROUGE_L": 0.3694136165277137,
+        "B4_Rouge": 0.5192132873917045
+      },
+      "cfg": {
+        "base_id": "3576",
+        "topk": 5,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5186567355116464,
+      "metrics": {
+        "Bleu_4": 0.1498335069156009,
+        "ROUGE_L": 0.36882322859604544,
+        "B4_Rouge": 0.5186567355116464
+      },
+      "cfg": {
+        "base_id": "3576",
+        "topk": 3,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.515383288762,
+      "metrics": {
+        "Bleu_4": 0.13888048381104265,
+        "ROUGE_L": 0.37650280495095734,
+        "B4_Rouge": 0.515383288762
+      },
+      "cfg": {
+        "base_id": "3258",
+        "topk": 5,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5144120209973974,
+      "metrics": {
+        "Bleu_4": 0.13831734019027464,
+        "ROUGE_L": 0.3760946808071227,
+        "B4_Rouge": 0.5144120209973974
+      },
+      "cfg": {
+        "base_id": "2792",
+        "topk": 3,
+        "num_extra": 0,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5144120209973974,
+      "metrics": {
+        "Bleu_4": 0.13831734019027464,
+        "ROUGE_L": 0.3760946808071227,
+        "B4_Rouge": 0.5144120209973974
+      },
+      "cfg": {
+        "base_id": "2792",
+        "topk": 5,
+        "num_extra": 0,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5143134833983597,
+      "metrics": {
+        "Bleu_4": 0.13924183615264354,
+        "ROUGE_L": 0.3750716472457162,
+        "B4_Rouge": 0.5143134833983597
+      },
+      "cfg": {
+        "base_id": "3258",
+        "topk": 3,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5134841808928843,
+      "metrics": {
+        "Bleu_4": 0.1383366757890438,
+        "ROUGE_L": 0.37514750510384043,
+        "B4_Rouge": 0.5134841808928843
+      },
+      "cfg": {
+        "base_id": "3576",
+        "topk": 3,
+        "num_extra": 0,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5134841808928843,
+      "metrics": {
+        "Bleu_4": 0.1383366757890438,
+        "ROUGE_L": 0.37514750510384043,
+        "B4_Rouge": 0.5134841808928843
+      },
+      "cfg": {
+        "base_id": "3576",
+        "topk": 5,
+        "num_extra": 0,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5108795284228642,
+      "metrics": {
+        "Bleu_4": 0.1529930537676012,
+        "ROUGE_L": 0.35788647465526296,
+        "B4_Rouge": 0.5108795284228642
+      },
+      "cfg": {
+        "base_id": "345",
+        "topk": 5,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5104636888559378,
+      "metrics": {
+        "Bleu_4": 0.13835060354724907,
+        "ROUGE_L": 0.37211308530868875,
+        "B4_Rouge": 0.5104636888559378
+      },
+      "cfg": {
+        "base_id": "3304",
+        "topk": 3,
+        "num_extra": 0,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5104636888559378,
+      "metrics": {
+        "Bleu_4": 0.13835060354724907,
+        "ROUGE_L": 0.37211308530868875,
+        "B4_Rouge": 0.5104636888559378
+      },
+      "cfg": {
+        "base_id": "3304",
+        "topk": 5,
+        "num_extra": 0,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5100042155214553,
+      "metrics": {
+        "Bleu_4": 0.14444204160783156,
+        "ROUGE_L": 0.3655621739136237,
+        "B4_Rouge": 0.5100042155214553
+      },
+      "cfg": {
+        "base_id": "1437",
+        "topk": 3,
+        "num_extra": 0,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5100042155214553,
+      "metrics": {
+        "Bleu_4": 0.14444204160783156,
+        "ROUGE_L": 0.3655621739136237,
+        "B4_Rouge": 0.5100042155214553
+      },
+      "cfg": {
+        "base_id": "1437",
+        "topk": 5,
+        "num_extra": 0,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    },
+    {
+      "score": 0.5099657078603765,
+      "metrics": {
+        "Bleu_4": 0.14026927338373116,
+        "ROUGE_L": 0.3696964344766454,
+        "B4_Rouge": 0.5099657078603765
+      },
+      "cfg": {
+        "base_id": "3304",
+        "topk": 5,
+        "num_extra": 1,
+        "w_freq": 0.8,
+        "w_rank": 0.8,
+        "w_pos": 0.1,
+        "placement": "before_impression",
+        "min_words": 4,
+        "max_words": 16
+      }
+    }
+  ],
+  "val": {
+    "Bleu_4": 0.1500828507296191,
+    "ROUGE_L": 0.37855537128492767,
+    "B4_Rouge": 0.5286382220145468,
+    "unique_outputs": 29
+  },
+  "test": {
+    "Bleu_4": 0.1487812523230783,
+    "ROUGE_L": 0.37834226108055224,
+    "B4_Rouge": 0.5271235134036305,
+    "unique_outputs": 30
+  }
+}

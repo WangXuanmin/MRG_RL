@@ -1,0 +1,253 @@
+{
+  "source_root": "/data/wang.xuanmin/R2GenGPT",
+  "pack_dir": "/data/wang.xuanmin/R2GenGPT_core_pack_20260609_025633",
+  "num_files": 156,
+  "files": [
+    "README.md",
+    "UPGRADE_PLAN.md",
+    "configs/config.py",
+    "data/iu_xray/annotation.json",
+    "data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json",
+    "data/iu_xray/annotation_rag_top20_number_cw1.json",
+    "dataset/data_helper.py",
+    "models/R2GenGPT.py",
+    "models/vision_resampler.py",
+    "save/iu_xray/clinical_scalar_selector_top50/summary.json",
+    "save/iu_xray/label_guided_selector_top50/summary.json",
+    "save/iu_xray/manual_template_target_b4rouge/clinical_metrics.json",
+    "save/iu_xray/manual_template_target_b4rouge/result/test_refs.json",
+    "save/iu_xray/manual_template_target_b4rouge/result/test_result.json",
+    "save/iu_xray/manual_template_target_b4rouge/result/val_refs.json",
+    "save/iu_xray/manual_template_target_b4rouge/result/val_result.json",
+    "save/iu_xray/manual_template_target_b4rouge/summary.json",
+    "save/iu_xray/manual_template_target_b4rouge/template.txt",
+    "save/iu_xray/manual_template_target_b4rouge/test_summary.json",
+    "save/iu_xray/manual_template_target_b4rouge/val_summary.json",
+    "save/iu_xray/model_registry/B4_ROUGE_EXPERIMENT.md",
+    "save/iu_xray/model_registry/DPO_DIAGNOSIS.md",
+    "save/iu_xray/model_registry/EXPERIMENT_LOG.md",
+    "save/iu_xray/model_registry/IUXRAY_TRIAL_AND_ERROR_REVIEW.md",
+    "save/iu_xray/model_registry/README.txt",
+    "save/iu_xray/model_registry/RERANKER_EXPERIMENT_SUMMARY.json",
+    "save/iu_xray/model_registry/SFT_RESAMPLED_EXPERIMENT.md",
+    "save/iu_xray/model_registry/TARGET_TEMPLATE_B4ROUGE.txt",
+    "save/iu_xray/model_registry/clinical_metric_summary_20260609.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5/log.txt",
+    "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_logp_top20/summary.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_logp_top20/test_choices.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_logp_top20/test_metrics.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_logp_top20/test_preds.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_logp_top20/test_refs.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_test_beam3/clinical_metrics.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_test_beam3/result/test_refs.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_test_beam3/result/test_result.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_test_beam3/run.log",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5/log.txt",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_beam1/summary.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_beam1/test_choices.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_beam1/test_metrics.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_beam1/test_preds.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_beam1/test_raw_outputs.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_beam1/test_refs.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch0_beam1/summary.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch0_beam1/test_choices.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch0_beam1/test_metrics.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch0_beam1/test_preds.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch0_beam1/test_raw_outputs.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch0_beam1/test_refs.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch1_beam1/summary.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch1_beam1/test_choices.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch1_beam1/test_metrics.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch1_beam1/test_preds.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch1_beam1/test_raw_outputs.json",
+    "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_epoch1_beam1/test_refs.json",
+    "save/iu_xray/rag_top20_b4rouge/build_summary.json",
+    "save/iu_xray/rag_top20_copy_oracle_cw1/build_summary.json",
+    "save/iu_xray/rag_top20_copy_oracle_cw1/test_oracle_preds.json",
+    "save/iu_xray/rag_top20_copy_oracle_cw1/train_oracle_preds.json",
+    "save/iu_xray/rag_top20_copy_oracle_cw1/val_oracle_preds.json",
+    "save/iu_xray/rag_top20_number_cw1/build_summary.json",
+    "save/iu_xray/rag_top50_b4rouge/build_summary.json",
+    "save/iu_xray/rag_top50_clinical_oracle/summary.json",
+    "save/iu_xray/rag_top50_clinical_oracle/test_cw1.0_rf0.0_preds.json",
+    "save/iu_xray/rag_top50_clinical_oracle/test_cw1.0_rf0.0_radgraph.json",
+    "save/iu_xray/rag_top50_clinical_oracle/test_summary.json",
+    "save/iu_xray/rag_top50_clinical_oracle/train_summary.json",
+    "save/iu_xray/rag_top50_clinical_oracle/val_summary.json",
+    "save/iu_xray/template_candidate_hybrid/summary.json",
+    "save/iu_xray/template_refinement_b4rouge/result/test_refs.json",
+    "save/iu_xray/template_refinement_b4rouge/result/test_result.json",
+    "save/iu_xray/template_refinement_b4rouge/result/val_refs.json",
+    "save/iu_xray/template_refinement_b4rouge/result/val_result.json",
+    "save/iu_xray/template_refinement_b4rouge/summary.json",
+    "save/iu_xray/template_refinement_b4rouge/test_summary.json",
+    "save/iu_xray/template_refinement_b4rouge/val_summary.json",
+    "save/iu_xray/template_sentence_fusion_b4rouge_fast/summary.json",
+    "save/iu_xray/template_sentence_fusion_b4rouge_fast/test_metrics.json",
+    "save/iu_xray/template_sentence_fusion_b4rouge_fast/test_preds.json",
+    "save/iu_xray/template_sentence_fusion_b4rouge_fast/val_metrics.json",
+    "save/iu_xray/template_sentence_fusion_b4rouge_fast/val_preds.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/summary.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/test_best_epoch16_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_best_epoch16_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch10_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch11_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch12_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch13_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch14_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch15_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch16_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch17_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch18_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch1_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch2_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch3_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch4_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch5_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch6_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch7_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch8_metrics.json",
+    "save/iu_xray/text_cross_reranker_top50_cw0/val_epoch9_metrics.json",
+    "scripts/1-1.shallow_run_iuxray.sh",
+    "scripts/1-2.shallow_test_iuxray.sh",
+    "scripts/2-1.delta_run_iuxray.sh",
+    "scripts/2-2.delta_test_iuxray.sh",
+    "scripts/3-1.deep_run_iuxray.sh",
+    "scripts/3-2.deep_test_iuxray.sh",
+    "scripts/4-1.shallow_run.sh",
+    "scripts/4-2.shallow_test.sh",
+    "scripts/5-1.delta_run.sh",
+    "scripts/5-2.delta_test.sh",
+    "scripts/6-1.deep_run.sh",
+    "scripts/6-2.deep_test.sh",
+    "scripts/build_iuxray_clinical_preferences.sh",
+    "scripts/download_iuxray_png_resume.sh",
+    "scripts/download_resources.sh",
+    "scripts/generate_iuxray_train_candidates.sh",
+    "scripts/precompute_iuxray_ref_logps_safe.sh",
+    "scripts/qwen_dino_dpo_iuxray_8gpu_safe.sh",
+    "scripts/qwen_dino_sft_iuxray.sh",
+    "scripts/qwen_dino_sft_iuxray_continue_8gpu.sh",
+    "scripts/run_iuxray_decode_sweep_sft.sh",
+    "scripts/test_qwen_dino_dpo_safe.sh",
+    "scripts/test_qwen_dino_sft_resampled_promoted.sh",
+    "tools/append_current_experiment_log.py",
+    "tools/append_template_refinement_log.py",
+    "tools/build_iuxray_candidate_number_annotation.py",
+    "tools/build_iuxray_copy_oracle_annotation.py",
+    "tools/build_iuxray_dino_topk_targets.py",
+    "tools/build_iuxray_rag_annotation.py",
+    "tools/build_iuxray_resampled_annotation.py",
+    "tools/evaluate_iuxray_clinical_metrics.py",
+    "tools/evaluate_iuxray_template_candidate_hybrid.py",
+    "tools/package_core_artifacts.py",
+    "tools/run_iuxray_candidate_number_inference.py",
+    "tools/run_iuxray_clinical_oracle.py",
+    "tools/run_iuxray_decode_sweep.py",
+    "tools/run_iuxray_sentence_fusion.py",
+    "tools/run_iuxray_target_sweep.py",
+    "tools/run_iuxray_template_global_sentence.py",
+    "tools/run_iuxray_template_refinement.py",
+    "tools/run_iuxray_template_sentence_fusion.py",
+    "tools/score_iuxray_retrieved_candidates_by_logp.py",
+    "tools/score_template_candidate_distribution.py",
+    "tools/select_iuxray_candidates_by_llm_logp.py",
+    "tools/summarize_iuxray_result.py",
+    "tools/train_iuxray_clinical_scalar_selector.py",
+    "tools/train_iuxray_dino_reranker.py",
+    "tools/train_iuxray_label_guided_selector.py",
+    "tools/train_iuxray_scalar_reranker.py",
+    "tools/train_iuxray_text_cross_reranker.py",
+    "train.py"
+  ],
+  "checkpoints_not_included": [
+    {
+      "path": "save/iu_xray/dpo_smoke/checkpoints/checkpoint_epoch0_step1_train.pth",
+      "bytes": 1799375327
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_dpo_dino_top20_b4rouge_pairwise_lr1e6/checkpoints/checkpoint_epoch0_step383_train.pth",
+      "bytes": 1799376609
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_dpo_gold_no_xxxx_conservative/checkpoints/checkpoint_epoch0_step205_train.pth",
+      "bytes": 1799376545
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_dpo_gold_ref_vs_worst/checkpoints/checkpoint_epoch0_step383_train.pth",
+      "bytes": 1799376545
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_dpo_safe_ref_cap50_margin010/checkpoints/checkpoint_epoch0_step91_train.pth",
+      "bytes": 1799376000
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft/checkpoints/checkpoint_epoch0_step0_bleu0.000000_cider0.000001.pth",
+      "bytes": 1799386644
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft/checkpoints/checkpoint_epoch0_step1531_bleu0.105438_cider0.195595.pth",
+      "bytes": 1799388279
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch0_step95_train.pth",
+      "bytes": 1799375872
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_8gpu_continue2/checkpoints/checkpoint_epoch1_step190_train.pth",
+      "bytes": 1799376417
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_dino_top20_b4rouge_lr1e6/checkpoints/checkpoint_epoch0_step95_train.pth",
+      "bytes": 1799376000
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_original_b4rouge_lr1e6/checkpoints/checkpoint_epoch0_step95_train.pth",
+      "bytes": 1799375936
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_original_b4rouge_lr5e6/checkpoints/checkpoint_epoch0_step95_train.pth",
+      "bytes": 1799375936
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5/checkpoints/checkpoint_epoch0_step383_train.pth",
+      "bytes": 1799376545
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5/checkpoints/checkpoint_epoch1_step766_train.pth",
+      "bytes": 1799376545
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5/checkpoints/checkpoint_epoch0_step191_train.pth",
+      "bytes": 1799376609
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5/checkpoints/checkpoint_epoch1_step382_train.pth",
+      "bytes": 1799376609
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5/checkpoints/checkpoint_epoch2_step573_train.pth",
+      "bytes": 1799376609
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_rag_top5_gold_lr1e6/checkpoints/checkpoint_epoch0_step95_train.pth",
+      "bytes": 1799376000
+    },
+    {
+      "path": "save/iu_xray/qwen_dino_sft_resampled_abnormal_lr1e6/checkpoints/checkpoint_epoch0_step175_train.pth",
+      "bytes": 1799376545
+    },
+    {
+      "path": "save/iu_xray/smoke_sft/checkpoints/checkpoint_epoch0_step0_bleu0.000000_cider0.000845.pth",
+      "bytes": 1799386644
+    },
+    {
+      "path": "save/iu_xray/smoke_sft/checkpoints/checkpoint_epoch0_step1_bleu0.000000_cider0.000845.pth",
+      "bytes": 1799386644
+    },
+    {
+      "path": "save/iu_xray/text_cross_reranker_top50_cw0/best_text_cross_reranker.pth",
+      "bytes": 4232041
+    }
+  ]
+}

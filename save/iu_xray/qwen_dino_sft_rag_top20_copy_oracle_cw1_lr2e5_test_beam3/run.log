@@ -1,0 +1,92 @@
+{'accelerator': 'gpu',
+ 'accumulate_grad_batches': 1,
+ 'annotation': 'data/iu_xray/annotation_rag_top20_copy_oracle_cw1.json',
+ 'base_dir': 'data/iu_xray/images',
+ 'batch_size': 6,
+ 'beam_size': 3,
+ 'ckpt_file': None,
+ 'dataset': 'iu_xray',
+ 'delta_file': 'save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5/checkpoints/checkpoint_epoch1_step766_train.pth',
+ 'devices': 1,
+ 'diversity_penalty': 0,
+ 'do_sample': False,
+ 'dpo_average_logps': True,
+ 'dpo_beta': 0.1,
+ 'dpo_objective': 'pairwise',
+ 'dpo_require_ref_logps': False,
+ 'dpo_sft_loss_weight': 0.0,
+ 'end_sym': '<|im_end|>',
+ 'every_n_train_steps': 0,
+ 'freeze_llm': False,
+ 'freeze_vm': True,
+ 'global_only': False,
+ 'gradient_clip_val': None,
+ 'learning_rate': 0.0001,
+ 'length_penalty': 1.0,
+ 'limit_test_batches': 1.0,
+ 'limit_train_batches': 1.0,
+ 'limit_val_batches': 1.0,
+ 'llama_model': None,
+ 'llm_alpha': 32,
+ 'llm_lora_target_modules': 'q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj',
+ 'llm_model': 'resources/models/Qwen3-8B',
+ 'llm_r': 16,
+ 'llm_use_lora': True,
+ 'lora_dropout': 0.1,
+ 'low_resource': False,
+ 'max_epochs': 3,
+ 'max_length': 160,
+ 'max_new_tokens': 160,
+ 'min_new_tokens': 40,
+ 'no_repeat_ngram_size': 0,
+ 'num_beam_groups': 1,
+ 'num_nodes': 1,
+ 'num_sanity_val_steps': 2,
+ 'num_workers': 4,
+ 'precision': 'bf16-mixed',
+ 'preference_file': None,
+ 'prefetch_factor': 4,
+ 'prompt': 'Generate a comprehensive and detailed diagnosis report for this '
+           'chest X-ray image.',
+ 'repetition_penalty': 1.0,
+ 'resampler_dropout': 0.0,
+ 'resampler_num_heads': 8,
+ 'resampler_num_layers': 2,
+ 'resampler_num_queries': 32,
+ 'savedmodel_path': 'save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_test_beam3',
+ 'scorer_types': ['Bleu_4', 'CIDEr'],
+ 'stage': 'sft',
+ 'strategy': 'auto',
+ 'temperature': 0,
+ 'test': True,
+ 'test_batch_size': 1,
+ 'val_batch_size': 16,
+ 'val_check_interval': 1.0,
+ 'validate': False,
+ 'vis_alpha': 16,
+ 'vis_r': 16,
+ 'vis_use_lora': False,
+ 'vision_model': 'resources/models/facebook_dinov2-base',
+ 'weights': [0.5, 0.5]}
+Seed set to 42
+Using bfloat16 Automatic Mixed Precision (AMP)
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+`Trainer(limit_train_batches=1.0)` was configured so 100% of the batches per epoch will be used..
+`Trainer(limit_val_batches=1.0)` was configured so 100% of the batches will be used..
+`Trainer(limit_test_batches=1.0)` was configured so 100% of the batches will be used..
+`Trainer(val_check_interval=1.0)` was configured so validation will run at the end of the training epoch..
+Loading vision encoder: resources/models/facebook_dinov2-base
+Vision encoder frozen
+Loading language model: resources/models/Qwen3-8B
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 72.81it/s]
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+Load checkpoint from save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5/checkpoints/checkpoint_epoch1_step766_train.pth
+You are using a CUDA device ('NVIDIA A100-SXM4-80GB') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Test result of save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5/checkpoints/checkpoint_epoch1_step766_train.pth: {'Bleu_1': 0.3706384751588183, 'Bleu_2': 0.2307643857799303, 'Bleu_3': 0.15617907675333342, 'Bleu_4': 0.11109539342192402, 'ROUGE_L': 0.31515822381081826, 'CIDEr': 0.19620753892113255}
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 382/382 0:43:07 • 0:00:00 0.14it/s 

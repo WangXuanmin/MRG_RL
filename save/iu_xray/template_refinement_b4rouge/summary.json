@@ -1,0 +1,1739 @@
+{
+  "baseline_template": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+  "target_b4": 0.2,
+  "baseline_min_test": {
+    "Bleu_4": 0.18241313606316437,
+    "ROUGE_L": 0.40007036081851793
+  },
+  "best": {
+    "kind": "fixed",
+    "name": "baseline",
+    "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+    "val": {
+      "Bleu_1": 0.4927859676942909,
+      "Bleu_2": 0.35034681211219315,
+      "Bleu_3": 0.2557246653839098,
+      "Bleu_4": 0.19162745348902563,
+      "ROUGE_L": 0.4113605842344592,
+      "B4_Rouge": 0.6029880377234849,
+      "unique_outputs": 1,
+      "name": "val_fixed_baseline"
+    },
+    "test": {
+      "Bleu_1": 0.4926032662920791,
+      "Bleu_2": 0.3450899138765263,
+      "Bleu_3": 0.24799305831259186,
+      "Bleu_4": 0.18241313606316437,
+      "ROUGE_L": 0.40007036081851793,
+      "B4_Rouge": 0.5824834968816823,
+      "unique_outputs": 1,
+      "name": "test_baseline",
+      "non_decrease_vs_baseline": true,
+      "target_b4_pass": false
+    }
+  },
+  "fixed_top10": [
+    {
+      "kind": "fixed",
+      "name": "baseline",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.4927859676942909,
+        "Bleu_2": 0.35034681211219315,
+        "Bleu_3": 0.2557246653839098,
+        "Bleu_4": 0.19162745348902563,
+        "ROUGE_L": 0.4113605842344592,
+        "B4_Rouge": 0.6029880377234849,
+        "unique_outputs": 1,
+        "name": "val_fixed_baseline"
+      },
+      "test": {
+        "Bleu_1": 0.4926032662920791,
+        "Bleu_2": 0.3450899138765263,
+        "Bleu_3": 0.24799305831259186,
+        "Bleu_4": 0.18241313606316437,
+        "ROUGE_L": 0.40007036081851793,
+        "B4_Rouge": 0.5824834968816823,
+        "unique_outputs": 1,
+        "name": "test_baseline",
+        "non_decrease_vs_baseline": true,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::there is no focal airspace consolidation=>there is no focal consolidation",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.48626951895628545,
+        "Bleu_2": 0.34683980901742456,
+        "Bleu_3": 0.2536556638714943,
+        "Bleu_4": 0.18997924713918005,
+        "ROUGE_L": 0.4116602792610833,
+        "B4_Rouge": 0.6016395264002633,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::there is no focal airspace consolidation=>there is no focal consolidation"
+      },
+      "test": {
+        "Bleu_1": 0.48722162591731233,
+        "Bleu_2": 0.3420593723486412,
+        "Bleu_3": 0.24620611341123796,
+        "Bleu_4": 0.1808984518418778,
+        "ROUGE_L": 0.4006442412040338,
+        "B4_Rouge": 0.5815426930459116,
+        "unique_outputs": 1,
+        "name": "test_replace::there is no focal airspace consolidation=>there is no focal consolidation",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "add::no acute disease",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute disease . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.5003414523104655,
+        "Bleu_2": 0.3572564701707167,
+        "Bleu_3": 0.2589246895291311,
+        "Bleu_4": 0.19241199277471477,
+        "ROUGE_L": 0.40917218662182797,
+        "B4_Rouge": 0.6015841793965427,
+        "unique_outputs": 1,
+        "name": "val_fixed_add::no acute disease"
+      },
+      "test": {
+        "Bleu_1": 0.47649669929430477,
+        "Bleu_2": 0.33555365174808466,
+        "Bleu_3": 0.23958830569600814,
+        "Bleu_4": 0.17522693125948766,
+        "ROUGE_L": 0.39721051068327956,
+        "B4_Rouge": 0.5724374419427672,
+        "unique_outputs": 1,
+        "name": "test_add::no acute disease",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::no pleural effusion or pneumothorax=>no pneumothorax or pleural effusion",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pneumothorax or pleural effusion . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.4927859676942909,
+        "Bleu_2": 0.34831971614614643,
+        "Bleu_3": 0.2528879638116184,
+        "Bleu_4": 0.18811064789616389,
+        "ROUGE_L": 0.4115238025600414,
+        "B4_Rouge": 0.5996344504562052,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::no pleural effusion or pneumothorax=>no pneumothorax or pleural effusion"
+      },
+      "test": {
+        "Bleu_1": 0.4926032662920791,
+        "Bleu_2": 0.3443287675023761,
+        "Bleu_3": 0.24650550420874925,
+        "Bleu_4": 0.18004805558516976,
+        "ROUGE_L": 0.40017491799787136,
+        "B4_Rouge": 0.5802229735830411,
+        "unique_outputs": 1,
+        "name": "test_replace::no pleural effusion or pneumothorax=>no pneumothorax or pleural effusion",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::no pleural effusion or pneumothorax=>there is no pleural effusion or pneumothorax",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . there is no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.5027776338456567,
+        "Bleu_2": 0.3506784823333749,
+        "Bleu_3": 0.2556199633943704,
+        "Bleu_4": 0.19156502105320652,
+        "ROUGE_L": 0.40599807178229613,
+        "B4_Rouge": 0.5975630928355027,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::no pleural effusion or pneumothorax=>there is no pleural effusion or pneumothorax"
+      },
+      "test": {
+        "Bleu_1": 0.48697049024271255,
+        "Bleu_2": 0.3339602738729924,
+        "Bleu_3": 0.23839451978986545,
+        "Bleu_4": 0.17503215116866913,
+        "ROUGE_L": 0.3945373111678503,
+        "B4_Rouge": 0.5695694623365194,
+        "unique_outputs": 1,
+        "name": "test_replace::no pleural effusion or pneumothorax=>there is no pleural effusion or pneumothorax",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::no pleural effusion or pneumothorax=>no pleural effusion or pneumothorax is seen",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax is seen . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.5040073485336091,
+        "Bleu_2": 0.3516657157887303,
+        "Bleu_3": 0.254156910796921,
+        "Bleu_4": 0.18851037968267392,
+        "ROUGE_L": 0.4080809872304404,
+        "B4_Rouge": 0.5965913669131143,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::no pleural effusion or pneumothorax=>no pleural effusion or pneumothorax is seen"
+      },
+      "test": {
+        "Bleu_1": 0.48893384102805276,
+        "Bleu_2": 0.336672473233572,
+        "Bleu_3": 0.24029681598786692,
+        "Bleu_4": 0.1754258678139718,
+        "ROUGE_L": 0.396282046447098,
+        "B4_Rouge": 0.5717079142610698,
+        "unique_outputs": 1,
+        "name": "test_replace::no pleural effusion or pneumothorax=>no pleural effusion or pneumothorax is seen",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::no acute cardiopulmonary abnormality=>no acute cardiopulmonary disease",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary disease .",
+      "val": {
+        "Bleu_1": 0.4944809971170325,
+        "Bleu_2": 0.3495117281852427,
+        "Bleu_3": 0.2522922085733163,
+        "Bleu_4": 0.18658368084070517,
+        "ROUGE_L": 0.40995095046691615,
+        "B4_Rouge": 0.5965346313076213,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::no acute cardiopulmonary abnormality=>no acute cardiopulmonary disease"
+      },
+      "test": {
+        "Bleu_1": 0.49394900972414496,
+        "Bleu_2": 0.3444395237379668,
+        "Bleu_3": 0.24470605209523535,
+        "Bleu_4": 0.17726929159336077,
+        "ROUGE_L": 0.3995385821779197,
+        "B4_Rouge": 0.5768078737712805,
+        "unique_outputs": 1,
+        "name": "test_replace::no acute cardiopulmonary abnormality=>no acute cardiopulmonary disease",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "add::no focal consolidation",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no focal consolidation . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.48935806965624346,
+        "Bleu_2": 0.34970961669907646,
+        "Bleu_3": 0.25795404983682824,
+        "Bleu_4": 0.19242312662958108,
+        "ROUGE_L": 0.40409660455823526,
+        "B4_Rouge": 0.5965197311878163,
+        "unique_outputs": 1,
+        "name": "val_fixed_add::no focal consolidation"
+      },
+      "test": {
+        "Bleu_1": 0.46716366947413684,
+        "Bleu_2": 0.3289631260905662,
+        "Bleu_3": 0.23853365842929375,
+        "Bleu_4": 0.17445390706107972,
+        "ROUGE_L": 0.3918511368873228,
+        "B4_Rouge": 0.5663050439484025,
+        "unique_outputs": 1,
+        "name": "test_add::no focal consolidation",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::the heart size and mediastinal contours are within normal limits=>heart size and mediastinal contours are within normal limits",
+      "text": "heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.48556943086660637,
+        "Bleu_2": 0.3438564758815854,
+        "Bleu_3": 0.2515130809910501,
+        "Bleu_4": 0.18873720204088246,
+        "ROUGE_L": 0.4062278880268482,
+        "B4_Rouge": 0.5949650900677307,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::the heart size and mediastinal contours are within normal limits=>heart size and mediastinal contours are within normal limits"
+      },
+      "test": {
+        "Bleu_1": 0.48544902183355854,
+        "Bleu_2": 0.3391126263214656,
+        "Bleu_3": 0.24425452018153768,
+        "Bleu_4": 0.17994577191021036,
+        "ROUGE_L": 0.3958333725963253,
+        "B4_Rouge": 0.5757791445065357,
+        "unique_outputs": 1,
+        "name": "test_replace::the heart size and mediastinal contours are within normal limits=>heart size and mediastinal contours are within normal limits",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "add::heart size is normal",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . heart size is normal . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.4868552968697512,
+        "Bleu_2": 0.34982677953724534,
+        "Bleu_3": 0.25539674715185817,
+        "Bleu_4": 0.18975116341096895,
+        "ROUGE_L": 0.4038643500130812,
+        "B4_Rouge": 0.5936155134240502,
+        "unique_outputs": 1,
+        "name": "val_fixed_add::heart size is normal"
+      },
+      "test": {
+        "Bleu_1": 0.4655230032304519,
+        "Bleu_2": 0.33225515353573903,
+        "Bleu_3": 0.24071831349557513,
+        "Bleu_4": 0.1759917450974334,
+        "ROUGE_L": 0.39534648607991535,
+        "B4_Rouge": 0.5713382311773487,
+        "unique_outputs": 1,
+        "name": "test_add::heart size is normal",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    }
+  ],
+  "selector_top20_by_val": [
+    {
+      "kind": "selector",
+      "name": "thr0.72_len0.05_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.72,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.49295934003860903,
+        "Bleu_2": 0.35036588169698607,
+        "Bleu_3": 0.2555417321434606,
+        "Bleu_4": 0.19137498389470822,
+        "ROUGE_L": 0.4110103732116197,
+        "B4_Rouge": 0.6023853571063279,
+        "unique_outputs": 3,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.49186807012993566,
+        "Bleu_2": 0.34407184058557305,
+        "Bleu_3": 0.24688320323849336,
+        "Bleu_4": 0.1814285177744273,
+        "ROUGE_L": 0.39942994402356924,
+        "B4_Rouge": 0.5808584617979966,
+        "unique_outputs": 3,
+        "name": "test_thr0.72_len0.05_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.72_len0.1_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.72,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.49295934003860903,
+        "Bleu_2": 0.35036588169698607,
+        "Bleu_3": 0.2555417321434606,
+        "Bleu_4": 0.19137498389470822,
+        "ROUGE_L": 0.4110103732116197,
+        "B4_Rouge": 0.6023853571063279,
+        "unique_outputs": 3,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.49186807012993566,
+        "Bleu_2": 0.34407184058557305,
+        "Bleu_3": 0.24688320323849336,
+        "Bleu_4": 0.1814285177744273,
+        "ROUGE_L": 0.39942994402356924,
+        "B4_Rouge": 0.5808584617979966,
+        "unique_outputs": 3,
+        "name": "test_thr0.72_len0.1_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.72_len0.05_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.72,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4919657060831126,
+        "Bleu_2": 0.34917000299194506,
+        "Bleu_3": 0.2548831588760362,
+        "Bleu_4": 0.19107970359839815,
+        "ROUGE_L": 0.4098704274977876,
+        "B4_Rouge": 0.6009501310961858,
+        "unique_outputs": 5,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.491871509221731,
+        "Bleu_2": 0.3439382826625441,
+        "Bleu_3": 0.24673517409394366,
+        "Bleu_4": 0.18130444414422414,
+        "ROUGE_L": 0.39925416431323046,
+        "B4_Rouge": 0.5805586084574546,
+        "unique_outputs": 5,
+        "name": "test_thr0.72_len0.05_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.72_len0.1_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.72,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4919657060831126,
+        "Bleu_2": 0.34917000299194506,
+        "Bleu_3": 0.2548831588760362,
+        "Bleu_4": 0.19107970359839815,
+        "ROUGE_L": 0.4098704274977876,
+        "B4_Rouge": 0.6009501310961858,
+        "unique_outputs": 5,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.491871509221731,
+        "Bleu_2": 0.3439382826625441,
+        "Bleu_3": 0.24673517409394366,
+        "Bleu_4": 0.18130444414422414,
+        "ROUGE_L": 0.39925416431323046,
+        "B4_Rouge": 0.5805586084574546,
+        "unique_outputs": 5,
+        "name": "test_thr0.72_len0.1_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.68_len0.05_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.68,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.491850779047261,
+        "Bleu_2": 0.34908747220876385,
+        "Bleu_3": 0.25476627505058896,
+        "Bleu_4": 0.19101394351189085,
+        "ROUGE_L": 0.40967943298970505,
+        "B4_Rouge": 0.6006933765015959,
+        "unique_outputs": 6,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.49157067892096096,
+        "Bleu_2": 0.343159940781947,
+        "Bleu_3": 0.24586185918895992,
+        "Bleu_4": 0.18044772250895924,
+        "ROUGE_L": 0.3981774396810942,
+        "B4_Rouge": 0.5786251621900534,
+        "unique_outputs": 8,
+        "name": "test_thr0.68_len0.05_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.68_len0.1_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.68,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.491850779047261,
+        "Bleu_2": 0.34908747220876385,
+        "Bleu_3": 0.25476627505058896,
+        "Bleu_4": 0.19101394351189085,
+        "ROUGE_L": 0.40967943298970505,
+        "B4_Rouge": 0.6006933765015959,
+        "unique_outputs": 6,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.49157067892096096,
+        "Bleu_2": 0.343159940781947,
+        "Bleu_3": 0.24586185918895992,
+        "Bleu_4": 0.18044772250895924,
+        "ROUGE_L": 0.3981774396810942,
+        "B4_Rouge": 0.5786251621900534,
+        "unique_outputs": 8,
+        "name": "test_thr0.68_len0.1_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.68_len0.1_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.68,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.49100074650177167,
+        "Bleu_2": 0.3481037146452067,
+        "Bleu_3": 0.25390222148110553,
+        "Bleu_4": 0.190192376933053,
+        "ROUGE_L": 0.4087528936941147,
+        "B4_Rouge": 0.5989452706271677,
+        "unique_outputs": 8,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.49157067892096096,
+        "Bleu_2": 0.343159940781947,
+        "Bleu_3": 0.24586185918895992,
+        "Bleu_4": 0.18044772250895924,
+        "ROUGE_L": 0.3981774396810942,
+        "B4_Rouge": 0.5786251621900534,
+        "unique_outputs": 8,
+        "name": "test_thr0.68_len0.1_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.68_len0.05_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.68,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.49017591527754023,
+        "Bleu_2": 0.3473322471828112,
+        "Bleu_3": 0.25329361910730674,
+        "Bleu_4": 0.18973915530533234,
+        "ROUGE_L": 0.4081420928904382,
+        "B4_Rouge": 0.5978812481957705,
+        "unique_outputs": 10,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.490323767678892,
+        "Bleu_2": 0.34182899562096797,
+        "Bleu_3": 0.24464822539300732,
+        "Bleu_4": 0.17936927081625106,
+        "ROUGE_L": 0.3973777152631861,
+        "B4_Rouge": 0.5767469860794372,
+        "unique_outputs": 11,
+        "name": "test_thr0.68_len0.05_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.62_len0.1_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.62,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4846720363347535,
+        "Bleu_2": 0.3400855665359074,
+        "Bleu_3": 0.24679381877936551,
+        "Bleu_4": 0.18398631799006432,
+        "ROUGE_L": 0.4034383325315887,
+        "B4_Rouge": 0.5874246505216529,
+        "unique_outputs": 27,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.48493184922155286,
+        "Bleu_2": 0.3344026554345889,
+        "Bleu_3": 0.23742410387619106,
+        "Bleu_4": 0.17297664128210893,
+        "ROUGE_L": 0.3909297162998067,
+        "B4_Rouge": 0.5639063575819157,
+        "unique_outputs": 27,
+        "name": "test_thr0.62_len0.1_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.62_len0.05_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.62,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4843136711005634,
+        "Bleu_2": 0.3386309914010851,
+        "Bleu_3": 0.24535967371552317,
+        "Bleu_4": 0.1829170588907232,
+        "ROUGE_L": 0.40184638866748346,
+        "B4_Rouge": 0.5847634475582066,
+        "unique_outputs": 32,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.48280933164932766,
+        "Bleu_2": 0.3318952665971541,
+        "Bleu_3": 0.23496633598765726,
+        "Bleu_4": 0.17082965365450556,
+        "ROUGE_L": 0.38905911918809627,
+        "B4_Rouge": 0.5598887728426019,
+        "unique_outputs": 31,
+        "name": "test_thr0.62_len0.05_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.62_len0.1_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.62,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4776496308624703,
+        "Bleu_2": 0.33199092432020444,
+        "Bleu_3": 0.2395902611148299,
+        "Bleu_4": 0.1782865591430955,
+        "ROUGE_L": 0.3976705015683271,
+        "B4_Rouge": 0.5759570607114226,
+        "unique_outputs": 44,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.47705575168516196,
+        "Bleu_2": 0.3246020145024406,
+        "Bleu_3": 0.22797293308148076,
+        "Bleu_4": 0.16466133890865128,
+        "ROUGE_L": 0.3848405672552439,
+        "B4_Rouge": 0.5495019061638952,
+        "unique_outputs": 44,
+        "name": "test_thr0.62_len0.1_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.62_len0.05_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.62,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.47723892822435215,
+        "Bleu_2": 0.33051000880743264,
+        "Bleu_3": 0.23829903112033188,
+        "Bleu_4": 0.17745152571787887,
+        "ROUGE_L": 0.39517422546810904,
+        "B4_Rouge": 0.5726257511859879,
+        "unique_outputs": 52,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.4750663466169905,
+        "Bleu_2": 0.32309231734461646,
+        "Bleu_3": 0.22696372065142145,
+        "Bleu_4": 0.16411721957970057,
+        "ROUGE_L": 0.3837388567296536,
+        "B4_Rouge": 0.5478560763093542,
+        "unique_outputs": 50,
+        "name": "test_thr0.62_len0.05_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.56_len0.1_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.56,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.46915746167642663,
+        "Bleu_2": 0.3210333910850322,
+        "Bleu_3": 0.22945462383114515,
+        "Bleu_4": 0.16924797504777622,
+        "ROUGE_L": 0.3900299223021573,
+        "B4_Rouge": 0.5592778973499335,
+        "unique_outputs": 69,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.47048062130390517,
+        "Bleu_2": 0.3177305010900875,
+        "Bleu_3": 0.22197556295741158,
+        "Bleu_4": 0.15958121618193727,
+        "ROUGE_L": 0.379493648523686,
+        "B4_Rouge": 0.5390748647056233,
+        "unique_outputs": 67,
+        "name": "test_thr0.56_len0.1_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.56_len0.05_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.56,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.46371873566713784,
+        "Bleu_2": 0.31533335095334747,
+        "Bleu_3": 0.22429755577812074,
+        "Bleu_4": 0.16473706579532163,
+        "ROUGE_L": 0.38555252541475427,
+        "B4_Rouge": 0.5502895912100759,
+        "unique_outputs": 74,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.4634982973040359,
+        "Bleu_2": 0.3117888549388578,
+        "Bleu_3": 0.21745088065883272,
+        "Bleu_4": 0.15640066392329305,
+        "ROUGE_L": 0.3765061799170149,
+        "B4_Rouge": 0.532906843840308,
+        "unique_outputs": 75,
+        "name": "test_thr0.56_len0.05_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.56_len0.1_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.56,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.457610519520477,
+        "Bleu_2": 0.306888189681564,
+        "Bleu_3": 0.21568078016055645,
+        "Bleu_4": 0.1572331783336049,
+        "ROUGE_L": 0.3780924197199352,
+        "B4_Rouge": 0.5353255980535401,
+        "unique_outputs": 95,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.45556953780394605,
+        "Bleu_2": 0.3024522302409029,
+        "Bleu_3": 0.209662759806314,
+        "Bleu_4": 0.1502945818644336,
+        "ROUGE_L": 0.3694364742767935,
+        "B4_Rouge": 0.519731056141227,
+        "unique_outputs": 98,
+        "name": "test_thr0.56_len0.1_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.56_len0.05_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.56,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.45433311368970336,
+        "Bleu_2": 0.30380960826537384,
+        "Bleu_3": 0.2128097805845069,
+        "Bleu_4": 0.15464053374449224,
+        "ROUGE_L": 0.3759060374488076,
+        "B4_Rouge": 0.5305465711932998,
+        "unique_outputs": 104,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.4513195348221192,
+        "Bleu_2": 0.2991897090525158,
+        "Bleu_3": 0.20743073583866503,
+        "Bleu_4": 0.1488736642287216,
+        "ROUGE_L": 0.36745868311784674,
+        "B4_Rouge": 0.5163323473465684,
+        "unique_outputs": 104,
+        "name": "test_thr0.56_len0.05_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.5_len0.1_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.5,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4466560728049403,
+        "Bleu_2": 0.29558840595230196,
+        "Bleu_3": 0.20558234756124102,
+        "Bleu_4": 0.14842322556067025,
+        "ROUGE_L": 0.3713865627432461,
+        "B4_Rouge": 0.5198097883039163,
+        "unique_outputs": 119,
+        "name": "val_template_selector"
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.5_len0.05_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.5,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.44233137477384654,
+        "Bleu_2": 0.2899774512673623,
+        "Bleu_3": 0.19992056429097257,
+        "Bleu_4": 0.14308274670360727,
+        "ROUGE_L": 0.3646037773674444,
+        "B4_Rouge": 0.5076865240710517,
+        "unique_outputs": 130,
+        "name": "val_template_selector"
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.5_len0.1_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.5,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.43804425600889113,
+        "Bleu_2": 0.28405413977592947,
+        "Bleu_3": 0.19476053027029613,
+        "Bleu_4": 0.1389433391068352,
+        "ROUGE_L": 0.35963122413856463,
+        "B4_Rouge": 0.49857456324539984,
+        "unique_outputs": 163,
+        "name": "val_template_selector"
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.5_len0.05_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.5,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4325460953174766,
+        "Bleu_2": 0.2785489366856596,
+        "Bleu_3": 0.19017302769342623,
+        "Bleu_4": 0.13495889808126801,
+        "ROUGE_L": 0.35436660184217944,
+        "B4_Rouge": 0.4893254999234474,
+        "unique_outputs": 172,
+        "name": "val_template_selector"
+      }
+    }
+  ],
+  "evaluated_top_rows": [
+    {
+      "kind": "fixed",
+      "name": "baseline",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.4927859676942909,
+        "Bleu_2": 0.35034681211219315,
+        "Bleu_3": 0.2557246653839098,
+        "Bleu_4": 0.19162745348902563,
+        "ROUGE_L": 0.4113605842344592,
+        "B4_Rouge": 0.6029880377234849,
+        "unique_outputs": 1,
+        "name": "val_fixed_baseline"
+      },
+      "test": {
+        "Bleu_1": 0.4926032662920791,
+        "Bleu_2": 0.3450899138765263,
+        "Bleu_3": 0.24799305831259186,
+        "Bleu_4": 0.18241313606316437,
+        "ROUGE_L": 0.40007036081851793,
+        "B4_Rouge": 0.5824834968816823,
+        "unique_outputs": 1,
+        "name": "test_baseline",
+        "non_decrease_vs_baseline": true,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::there is no focal airspace consolidation=>there is no focal consolidation",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.48626951895628545,
+        "Bleu_2": 0.34683980901742456,
+        "Bleu_3": 0.2536556638714943,
+        "Bleu_4": 0.18997924713918005,
+        "ROUGE_L": 0.4116602792610833,
+        "B4_Rouge": 0.6016395264002633,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::there is no focal airspace consolidation=>there is no focal consolidation"
+      },
+      "test": {
+        "Bleu_1": 0.48722162591731233,
+        "Bleu_2": 0.3420593723486412,
+        "Bleu_3": 0.24620611341123796,
+        "Bleu_4": 0.1808984518418778,
+        "ROUGE_L": 0.4006442412040338,
+        "B4_Rouge": 0.5815426930459116,
+        "unique_outputs": 1,
+        "name": "test_replace::there is no focal airspace consolidation=>there is no focal consolidation",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "add::no acute disease",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute disease . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.5003414523104655,
+        "Bleu_2": 0.3572564701707167,
+        "Bleu_3": 0.2589246895291311,
+        "Bleu_4": 0.19241199277471477,
+        "ROUGE_L": 0.40917218662182797,
+        "B4_Rouge": 0.6015841793965427,
+        "unique_outputs": 1,
+        "name": "val_fixed_add::no acute disease"
+      },
+      "test": {
+        "Bleu_1": 0.47649669929430477,
+        "Bleu_2": 0.33555365174808466,
+        "Bleu_3": 0.23958830569600814,
+        "Bleu_4": 0.17522693125948766,
+        "ROUGE_L": 0.39721051068327956,
+        "B4_Rouge": 0.5724374419427672,
+        "unique_outputs": 1,
+        "name": "test_add::no acute disease",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::no pleural effusion or pneumothorax=>no pneumothorax or pleural effusion",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pneumothorax or pleural effusion . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.4927859676942909,
+        "Bleu_2": 0.34831971614614643,
+        "Bleu_3": 0.2528879638116184,
+        "Bleu_4": 0.18811064789616389,
+        "ROUGE_L": 0.4115238025600414,
+        "B4_Rouge": 0.5996344504562052,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::no pleural effusion or pneumothorax=>no pneumothorax or pleural effusion"
+      },
+      "test": {
+        "Bleu_1": 0.4926032662920791,
+        "Bleu_2": 0.3443287675023761,
+        "Bleu_3": 0.24650550420874925,
+        "Bleu_4": 0.18004805558516976,
+        "ROUGE_L": 0.40017491799787136,
+        "B4_Rouge": 0.5802229735830411,
+        "unique_outputs": 1,
+        "name": "test_replace::no pleural effusion or pneumothorax=>no pneumothorax or pleural effusion",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::no pleural effusion or pneumothorax=>there is no pleural effusion or pneumothorax",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . there is no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.5027776338456567,
+        "Bleu_2": 0.3506784823333749,
+        "Bleu_3": 0.2556199633943704,
+        "Bleu_4": 0.19156502105320652,
+        "ROUGE_L": 0.40599807178229613,
+        "B4_Rouge": 0.5975630928355027,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::no pleural effusion or pneumothorax=>there is no pleural effusion or pneumothorax"
+      },
+      "test": {
+        "Bleu_1": 0.48697049024271255,
+        "Bleu_2": 0.3339602738729924,
+        "Bleu_3": 0.23839451978986545,
+        "Bleu_4": 0.17503215116866913,
+        "ROUGE_L": 0.3945373111678503,
+        "B4_Rouge": 0.5695694623365194,
+        "unique_outputs": 1,
+        "name": "test_replace::no pleural effusion or pneumothorax=>there is no pleural effusion or pneumothorax",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::no pleural effusion or pneumothorax=>no pleural effusion or pneumothorax is seen",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax is seen . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.5040073485336091,
+        "Bleu_2": 0.3516657157887303,
+        "Bleu_3": 0.254156910796921,
+        "Bleu_4": 0.18851037968267392,
+        "ROUGE_L": 0.4080809872304404,
+        "B4_Rouge": 0.5965913669131143,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::no pleural effusion or pneumothorax=>no pleural effusion or pneumothorax is seen"
+      },
+      "test": {
+        "Bleu_1": 0.48893384102805276,
+        "Bleu_2": 0.336672473233572,
+        "Bleu_3": 0.24029681598786692,
+        "Bleu_4": 0.1754258678139718,
+        "ROUGE_L": 0.396282046447098,
+        "B4_Rouge": 0.5717079142610698,
+        "unique_outputs": 1,
+        "name": "test_replace::no pleural effusion or pneumothorax=>no pleural effusion or pneumothorax is seen",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::no acute cardiopulmonary abnormality=>no acute cardiopulmonary disease",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary disease .",
+      "val": {
+        "Bleu_1": 0.4944809971170325,
+        "Bleu_2": 0.3495117281852427,
+        "Bleu_3": 0.2522922085733163,
+        "Bleu_4": 0.18658368084070517,
+        "ROUGE_L": 0.40995095046691615,
+        "B4_Rouge": 0.5965346313076213,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::no acute cardiopulmonary abnormality=>no acute cardiopulmonary disease"
+      },
+      "test": {
+        "Bleu_1": 0.49394900972414496,
+        "Bleu_2": 0.3444395237379668,
+        "Bleu_3": 0.24470605209523535,
+        "Bleu_4": 0.17726929159336077,
+        "ROUGE_L": 0.3995385821779197,
+        "B4_Rouge": 0.5768078737712805,
+        "unique_outputs": 1,
+        "name": "test_replace::no acute cardiopulmonary abnormality=>no acute cardiopulmonary disease",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "add::no focal consolidation",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no focal consolidation . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.48935806965624346,
+        "Bleu_2": 0.34970961669907646,
+        "Bleu_3": 0.25795404983682824,
+        "Bleu_4": 0.19242312662958108,
+        "ROUGE_L": 0.40409660455823526,
+        "B4_Rouge": 0.5965197311878163,
+        "unique_outputs": 1,
+        "name": "val_fixed_add::no focal consolidation"
+      },
+      "test": {
+        "Bleu_1": 0.46716366947413684,
+        "Bleu_2": 0.3289631260905662,
+        "Bleu_3": 0.23853365842929375,
+        "Bleu_4": 0.17445390706107972,
+        "ROUGE_L": 0.3918511368873228,
+        "B4_Rouge": 0.5663050439484025,
+        "unique_outputs": 1,
+        "name": "test_add::no focal consolidation",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "replace::the heart size and mediastinal contours are within normal limits=>heart size and mediastinal contours are within normal limits",
+      "text": "heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.48556943086660637,
+        "Bleu_2": 0.3438564758815854,
+        "Bleu_3": 0.2515130809910501,
+        "Bleu_4": 0.18873720204088246,
+        "ROUGE_L": 0.4062278880268482,
+        "B4_Rouge": 0.5949650900677307,
+        "unique_outputs": 1,
+        "name": "val_fixed_replace::the heart size and mediastinal contours are within normal limits=>heart size and mediastinal contours are within normal limits"
+      },
+      "test": {
+        "Bleu_1": 0.48544902183355854,
+        "Bleu_2": 0.3391126263214656,
+        "Bleu_3": 0.24425452018153768,
+        "Bleu_4": 0.17994577191021036,
+        "ROUGE_L": 0.3958333725963253,
+        "B4_Rouge": 0.5757791445065357,
+        "unique_outputs": 1,
+        "name": "test_replace::the heart size and mediastinal contours are within normal limits=>heart size and mediastinal contours are within normal limits",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "add::heart size is normal",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . heart size is normal . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.4868552968697512,
+        "Bleu_2": 0.34982677953724534,
+        "Bleu_3": 0.25539674715185817,
+        "Bleu_4": 0.18975116341096895,
+        "ROUGE_L": 0.4038643500130812,
+        "B4_Rouge": 0.5936155134240502,
+        "unique_outputs": 1,
+        "name": "val_fixed_add::heart size is normal"
+      },
+      "test": {
+        "Bleu_1": 0.4655230032304519,
+        "Bleu_2": 0.33225515353573903,
+        "Bleu_3": 0.24071831349557513,
+        "Bleu_4": 0.1759917450974334,
+        "ROUGE_L": 0.39534648607991535,
+        "B4_Rouge": 0.5713382311773487,
+        "unique_outputs": 1,
+        "name": "test_add::heart size is normal",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "add::there is no pneumothorax",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . there is no pneumothorax . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.486743901080512,
+        "Bleu_2": 0.34620481964301203,
+        "Bleu_3": 0.25391955306929764,
+        "Bleu_4": 0.18985937911494133,
+        "ROUGE_L": 0.40357700368995514,
+        "B4_Rouge": 0.5934363828048965,
+        "unique_outputs": 1,
+        "name": "val_fixed_add::there is no pneumothorax"
+      },
+      "test": {
+        "Bleu_1": 0.46407485797034287,
+        "Bleu_2": 0.3250631193622232,
+        "Bleu_3": 0.23435743313114957,
+        "Bleu_4": 0.17196757440237115,
+        "ROUGE_L": 0.391368323378629,
+        "B4_Rouge": 0.5633358977810001,
+        "unique_outputs": 1,
+        "name": "test_add::there is no pneumothorax",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "fixed",
+      "name": "add::no acute osseous abnormality",
+      "text": "the heart size and mediastinal contours are within normal limits . the lungs are clear . there is no focal airspace consolidation . no pleural effusion or pneumothorax . there are degenerative changes of the spine . no acute osseous abnormality . no acute cardiopulmonary abnormality .",
+      "val": {
+        "Bleu_1": 0.48546284950426166,
+        "Bleu_2": 0.3449089117543015,
+        "Bleu_3": 0.2512921969508287,
+        "Bleu_4": 0.1879945259547359,
+        "ROUGE_L": 0.40520797573903605,
+        "B4_Rouge": 0.593202501693772,
+        "unique_outputs": 1,
+        "name": "val_fixed_add::no acute osseous abnormality"
+      },
+      "test": {
+        "Bleu_1": 0.46435334744344076,
+        "Bleu_2": 0.32495740115364025,
+        "Bleu_3": 0.23269169496759518,
+        "Bleu_4": 0.1708625047713854,
+        "ROUGE_L": 0.39333426733426746,
+        "B4_Rouge": 0.5641967721056529,
+        "unique_outputs": 1,
+        "name": "test_add::no acute osseous abnormality",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.72_len0.05_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.72,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.49295934003860903,
+        "Bleu_2": 0.35036588169698607,
+        "Bleu_3": 0.2555417321434606,
+        "Bleu_4": 0.19137498389470822,
+        "ROUGE_L": 0.4110103732116197,
+        "B4_Rouge": 0.6023853571063279,
+        "unique_outputs": 3,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.49186807012993566,
+        "Bleu_2": 0.34407184058557305,
+        "Bleu_3": 0.24688320323849336,
+        "Bleu_4": 0.1814285177744273,
+        "ROUGE_L": 0.39942994402356924,
+        "B4_Rouge": 0.5808584617979966,
+        "unique_outputs": 3,
+        "name": "test_thr0.72_len0.05_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.72_len0.1_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.72,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.49295934003860903,
+        "Bleu_2": 0.35036588169698607,
+        "Bleu_3": 0.2555417321434606,
+        "Bleu_4": 0.19137498389470822,
+        "ROUGE_L": 0.4110103732116197,
+        "B4_Rouge": 0.6023853571063279,
+        "unique_outputs": 3,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.49186807012993566,
+        "Bleu_2": 0.34407184058557305,
+        "Bleu_3": 0.24688320323849336,
+        "Bleu_4": 0.1814285177744273,
+        "ROUGE_L": 0.39942994402356924,
+        "B4_Rouge": 0.5808584617979966,
+        "unique_outputs": 3,
+        "name": "test_thr0.72_len0.1_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.72_len0.05_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.72,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4919657060831126,
+        "Bleu_2": 0.34917000299194506,
+        "Bleu_3": 0.2548831588760362,
+        "Bleu_4": 0.19107970359839815,
+        "ROUGE_L": 0.4098704274977876,
+        "B4_Rouge": 0.6009501310961858,
+        "unique_outputs": 5,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.491871509221731,
+        "Bleu_2": 0.3439382826625441,
+        "Bleu_3": 0.24673517409394366,
+        "Bleu_4": 0.18130444414422414,
+        "ROUGE_L": 0.39925416431323046,
+        "B4_Rouge": 0.5805586084574546,
+        "unique_outputs": 5,
+        "name": "test_thr0.72_len0.05_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.72_len0.1_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.72,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4919657060831126,
+        "Bleu_2": 0.34917000299194506,
+        "Bleu_3": 0.2548831588760362,
+        "Bleu_4": 0.19107970359839815,
+        "ROUGE_L": 0.4098704274977876,
+        "B4_Rouge": 0.6009501310961858,
+        "unique_outputs": 5,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.491871509221731,
+        "Bleu_2": 0.3439382826625441,
+        "Bleu_3": 0.24673517409394366,
+        "Bleu_4": 0.18130444414422414,
+        "ROUGE_L": 0.39925416431323046,
+        "B4_Rouge": 0.5805586084574546,
+        "unique_outputs": 5,
+        "name": "test_thr0.72_len0.1_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.68_len0.05_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.68,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.491850779047261,
+        "Bleu_2": 0.34908747220876385,
+        "Bleu_3": 0.25476627505058896,
+        "Bleu_4": 0.19101394351189085,
+        "ROUGE_L": 0.40967943298970505,
+        "B4_Rouge": 0.6006933765015959,
+        "unique_outputs": 6,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.49157067892096096,
+        "Bleu_2": 0.343159940781947,
+        "Bleu_3": 0.24586185918895992,
+        "Bleu_4": 0.18044772250895924,
+        "ROUGE_L": 0.3981774396810942,
+        "B4_Rouge": 0.5786251621900534,
+        "unique_outputs": 8,
+        "name": "test_thr0.68_len0.05_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.68_len0.1_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.68,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.491850779047261,
+        "Bleu_2": 0.34908747220876385,
+        "Bleu_3": 0.25476627505058896,
+        "Bleu_4": 0.19101394351189085,
+        "ROUGE_L": 0.40967943298970505,
+        "B4_Rouge": 0.6006933765015959,
+        "unique_outputs": 6,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.49157067892096096,
+        "Bleu_2": 0.343159940781947,
+        "Bleu_3": 0.24586185918895992,
+        "Bleu_4": 0.18044772250895924,
+        "ROUGE_L": 0.3981774396810942,
+        "B4_Rouge": 0.5786251621900534,
+        "unique_outputs": 8,
+        "name": "test_thr0.68_len0.1_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.68_len0.1_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.68,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.49100074650177167,
+        "Bleu_2": 0.3481037146452067,
+        "Bleu_3": 0.25390222148110553,
+        "Bleu_4": 0.190192376933053,
+        "ROUGE_L": 0.4087528936941147,
+        "B4_Rouge": 0.5989452706271677,
+        "unique_outputs": 8,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.49157067892096096,
+        "Bleu_2": 0.343159940781947,
+        "Bleu_3": 0.24586185918895992,
+        "Bleu_4": 0.18044772250895924,
+        "ROUGE_L": 0.3981774396810942,
+        "B4_Rouge": 0.5786251621900534,
+        "unique_outputs": 8,
+        "name": "test_thr0.68_len0.1_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.68_len0.05_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.68,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.49017591527754023,
+        "Bleu_2": 0.3473322471828112,
+        "Bleu_3": 0.25329361910730674,
+        "Bleu_4": 0.18973915530533234,
+        "ROUGE_L": 0.4081420928904382,
+        "B4_Rouge": 0.5978812481957705,
+        "unique_outputs": 10,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.490323767678892,
+        "Bleu_2": 0.34182899562096797,
+        "Bleu_3": 0.24464822539300732,
+        "Bleu_4": 0.17936927081625106,
+        "ROUGE_L": 0.3973777152631861,
+        "B4_Rouge": 0.5767469860794372,
+        "unique_outputs": 11,
+        "name": "test_thr0.68_len0.05_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.62_len0.1_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.62,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4846720363347535,
+        "Bleu_2": 0.3400855665359074,
+        "Bleu_3": 0.24679381877936551,
+        "Bleu_4": 0.18398631799006432,
+        "ROUGE_L": 0.4034383325315887,
+        "B4_Rouge": 0.5874246505216529,
+        "unique_outputs": 27,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.48493184922155286,
+        "Bleu_2": 0.3344026554345889,
+        "Bleu_3": 0.23742410387619106,
+        "Bleu_4": 0.17297664128210893,
+        "ROUGE_L": 0.3909297162998067,
+        "B4_Rouge": 0.5639063575819157,
+        "unique_outputs": 27,
+        "name": "test_thr0.62_len0.1_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.62_len0.05_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.62,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4843136711005634,
+        "Bleu_2": 0.3386309914010851,
+        "Bleu_3": 0.24535967371552317,
+        "Bleu_4": 0.1829170588907232,
+        "ROUGE_L": 0.40184638866748346,
+        "B4_Rouge": 0.5847634475582066,
+        "unique_outputs": 32,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.48280933164932766,
+        "Bleu_2": 0.3318952665971541,
+        "Bleu_3": 0.23496633598765726,
+        "Bleu_4": 0.17082965365450556,
+        "ROUGE_L": 0.38905911918809627,
+        "B4_Rouge": 0.5598887728426019,
+        "unique_outputs": 31,
+        "name": "test_thr0.62_len0.05_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.62_len0.1_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.62,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.4776496308624703,
+        "Bleu_2": 0.33199092432020444,
+        "Bleu_3": 0.2395902611148299,
+        "Bleu_4": 0.1782865591430955,
+        "ROUGE_L": 0.3976705015683271,
+        "B4_Rouge": 0.5759570607114226,
+        "unique_outputs": 44,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.47705575168516196,
+        "Bleu_2": 0.3246020145024406,
+        "Bleu_3": 0.22797293308148076,
+        "Bleu_4": 0.16466133890865128,
+        "ROUGE_L": 0.3848405672552439,
+        "B4_Rouge": 0.5495019061638952,
+        "unique_outputs": 44,
+        "name": "test_thr0.62_len0.1_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.62_len0.05_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.62,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.47723892822435215,
+        "Bleu_2": 0.33051000880743264,
+        "Bleu_3": 0.23829903112033188,
+        "Bleu_4": 0.17745152571787887,
+        "ROUGE_L": 0.39517422546810904,
+        "B4_Rouge": 0.5726257511859879,
+        "unique_outputs": 52,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.4750663466169905,
+        "Bleu_2": 0.32309231734461646,
+        "Bleu_3": 0.22696372065142145,
+        "Bleu_4": 0.16411721957970057,
+        "ROUGE_L": 0.3837388567296536,
+        "B4_Rouge": 0.5478560763093542,
+        "unique_outputs": 50,
+        "name": "test_thr0.62_len0.05_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.56_len0.1_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.56,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.46915746167642663,
+        "Bleu_2": 0.3210333910850322,
+        "Bleu_3": 0.22945462383114515,
+        "Bleu_4": 0.16924797504777622,
+        "ROUGE_L": 0.3900299223021573,
+        "B4_Rouge": 0.5592778973499335,
+        "unique_outputs": 69,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.47048062130390517,
+        "Bleu_2": 0.3177305010900875,
+        "Bleu_3": 0.22197556295741158,
+        "Bleu_4": 0.15958121618193727,
+        "ROUGE_L": 0.379493648523686,
+        "B4_Rouge": 0.5390748647056233,
+        "unique_outputs": 67,
+        "name": "test_thr0.56_len0.1_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.56_len0.05_abn0.05_rank0.002",
+      "params": {
+        "threshold": 0.56,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.05,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.46371873566713784,
+        "Bleu_2": 0.31533335095334747,
+        "Bleu_3": 0.22429755577812074,
+        "Bleu_4": 0.16473706579532163,
+        "ROUGE_L": 0.38555252541475427,
+        "B4_Rouge": 0.5502895912100759,
+        "unique_outputs": 74,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.4634982973040359,
+        "Bleu_2": 0.3117888549388578,
+        "Bleu_3": 0.21745088065883272,
+        "Bleu_4": 0.15640066392329305,
+        "ROUGE_L": 0.3765061799170149,
+        "B4_Rouge": 0.532906843840308,
+        "unique_outputs": 75,
+        "name": "test_thr0.56_len0.05_abn0.05_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.56_len0.1_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.56,
+        "length_weight": 0.1,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.457610519520477,
+        "Bleu_2": 0.306888189681564,
+        "Bleu_3": 0.21568078016055645,
+        "Bleu_4": 0.1572331783336049,
+        "ROUGE_L": 0.3780924197199352,
+        "B4_Rouge": 0.5353255980535401,
+        "unique_outputs": 95,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.45556953780394605,
+        "Bleu_2": 0.3024522302409029,
+        "Bleu_3": 0.209662759806314,
+        "Bleu_4": 0.1502945818644336,
+        "ROUGE_L": 0.3694364742767935,
+        "B4_Rouge": 0.519731056141227,
+        "unique_outputs": 98,
+        "name": "test_thr0.56_len0.1_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    },
+    {
+      "kind": "selector",
+      "name": "thr0.56_len0.05_abn0.02_rank0.002",
+      "params": {
+        "threshold": 0.56,
+        "length_weight": 0.05,
+        "abnormal_weight": 0.02,
+        "rank_weight": 0.002
+      },
+      "val": {
+        "Bleu_1": 0.45433311368970336,
+        "Bleu_2": 0.30380960826537384,
+        "Bleu_3": 0.2128097805845069,
+        "Bleu_4": 0.15464053374449224,
+        "ROUGE_L": 0.3759060374488076,
+        "B4_Rouge": 0.5305465711932998,
+        "unique_outputs": 104,
+        "name": "val_template_selector"
+      },
+      "test": {
+        "Bleu_1": 0.4513195348221192,
+        "Bleu_2": 0.2991897090525158,
+        "Bleu_3": 0.20743073583866503,
+        "Bleu_4": 0.1488736642287216,
+        "ROUGE_L": 0.36745868311784674,
+        "B4_Rouge": 0.5163323473465684,
+        "unique_outputs": 104,
+        "name": "test_thr0.56_len0.05_abn0.02_rank0.002",
+        "non_decrease_vs_baseline": false,
+        "target_b4_pass": false
+      }
+    }
+  ]
+}
