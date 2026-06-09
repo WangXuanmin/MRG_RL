@@ -32,7 +32,7 @@ Large checkpoints are intentionally excluded. See `CHECKPOINTS_NOT_INCLUDED.md`.
 
 ## Main Finding
 
-The retrieval candidate pool is strong enough to meet the requested targets if the correct candidate can be selected:
+The central finding is that the target is reachable in the retrieved-candidate space, but not yet reachable with the deployable selectors and generators trained in this small-data setting. In other words, the bottleneck moved from "can we find a good report?" to "can the model reliably select or use that report without reference access?"
 
 | Setting | Test Bleu_4 | Test ROUGE_L | CheXbert micro F1 | RadGraph rg_er |
 | --- | ---: | ---: | ---: | ---: |
@@ -40,37 +40,23 @@ The retrieval candidate pool is strong enough to meet the requested targets if t
 | Top-20 clinical copy oracle | 0.2556 | 0.4671 | 0.7111 | not rerun |
 | Fixed template baseline | 0.1824 | 0.4001 | 0.0000 | 0.3965 |
 
-However, deployable selectors trained in this small-data setting did not reliably select the correct retrieved report. The strongest conclusion is that the next useful step is not more prompt-level tuning, but a better radiology image-text aligned retriever/reranker, preferably trained with larger image-report data such as MIMIC-CXR.
+What we tried and found:
 
-## Important Files
+| Experiment line | Best/representative result | Finding |
+| --- | --- | --- |
+| Original SFT/decode sweeps | Best normal SFT tests stayed around `B4≈0.13-0.14`, `Rouge-L≈0.37` | Standard generation did not reach the language-overlap target. Decode tuning alone was not enough. |
+| DPO variants | DPO did not improve the target metrics and was diagnosed as unstable/misaligned for this setup | Pairwise preference training was not useful without a stronger reward/selection signal. |
+| Fixed template baseline | `B4=0.1824`, `Rouge-L=0.4001`, `CheXbert F1=0.0000`, `RadGraph rg_er=0.3965` | A generic normal-report template is a strong B4/Rouge baseline on IU X-Ray, but it fails clinical label accuracy. |
+| Template refinement and sentence fusion | Could preserve Rouge-L near `0.40`, but did not raise B4 to `0.20` or improve CheXbert meaningfully | Template methods exploit dataset bias, but cannot solve abnormal clinical correctness. |
+| Top-k retrieval oracle | Top-50 oracle: `B4=0.3645`, `Rouge-L=0.5624`; clinical oracle also passed CheXbert/RadGraph | Retrieval candidates contain enough information to meet all targets if selected correctly. |
+| Clinical scalar / image-label selector | Test candidate selector reached `CheXbert F1=0.4017`, but only `B4=0.1284`, `Rouge-L=0.3473` | Clinical signal can improve labels, but current image features select reports with poor ngram overlap. |
+| Text cross-reranker | Best test: `B4=0.1350`, `Rouge-L=0.3528`, `CheXbert F1=0.3551` | Frozen text embeddings plus DINO image embeddings were not enough for reliable candidate selection. |
+| Template-candidate hybrid | Any nonzero replacement of the template with selected candidates reduced B4/Rouge | Weak selectors damage the strong template baseline rather than improving it. |
+| Copy-oracle SFT with top-20 candidates in prompt | Free generation: `B4=0.1111`, `Rouge-L=0.3152`, `CheXbert F1=0.1905`, `RadGraph rg_er=0.2689` | Even when trained to copy oracle candidates, the model did not reliably use long retrieved context during generation. |
+| Model log-prob candidate selection | `B4=0.0632`, `Rouge-L=0.2735`; average selected rank `9.69` | Sequence likelihood was dominated by language prior/style, not image-conditioned correctness. |
+| Candidate-number SFT | Best tested checkpoint: `B4=0.1068`, `Rouge-L=0.3256`; output biased toward high candidate numbers | Reducing generation to 20-way candidate-number selection still did not learn robust image-conditioned ranking. |
 
-Start here:
-
-- `save/iu_xray/model_registry/EXPERIMENT_LOG.md`
-- `save/iu_xray/model_registry/B4_ROUGE_EXPERIMENT.md`
-- `save/iu_xray/model_registry/IUXRAY_TRIAL_AND_ERROR_REVIEW.md`
-- `README_CORE_PACK.md`
-- `PACK_MANIFEST.json`
-
-Core tools:
-
-- `tools/evaluate_iuxray_clinical_metrics.py`
-- `tools/build_iuxray_rag_annotation.py`
-- `tools/run_iuxray_clinical_oracle.py`
-- `tools/build_iuxray_copy_oracle_annotation.py`
-- `tools/build_iuxray_candidate_number_annotation.py`
-- `tools/run_iuxray_candidate_number_inference.py`
-- `tools/train_iuxray_text_cross_reranker.py`
-- `tools/train_iuxray_label_guided_selector.py`
-
-Key result folders:
-
-- `save/iu_xray/manual_template_target_b4rouge/`
-- `save/iu_xray/rag_top50_clinical_oracle/`
-- `save/iu_xray/rag_top20_copy_oracle_cw1/`
-- `save/iu_xray/qwen_dino_sft_rag_top20_copy_oracle_cw1_lr2e5_test_beam3/`
-- `save/iu_xray/qwen_dino_sft_rag_top20_number_cw1_lr5e5_infer_beam1/`
-- `save/iu_xray/text_cross_reranker_top50_cw0/`
+Overall, the useful next step is not more prompt-level tuning on IU X-Ray alone. The next model improvement should replace the weak selection signal with a radiology image-text aligned retriever/reranker, preferably trained or adapted with larger image-report data such as MIMIC-CXR, and then use candidate copy/fusion only after selection quality is strong.
 
 ## Repository Layout
 
