@@ -87,7 +87,7 @@ After the DINO top20 oracle showed large headroom, three deployable selectors we
    - Best val variant was random forest: B4 0.135396, ROUGE_L 0.354367, B4+Rouge 0.489764.
    - Candidate prior helps, but still does not match the best SFT generation result.
 
-3. R2GenGPT image-conditioned log-likelihood selector
+3. MRG model image-conditioned log-likelihood selector
    - Output: `save/iu_xray/dino_llm_logp_selector_sft_top20/`
    - Scored candidates with `qwen_dino_sft_dino_top20_b4rouge_lr1e6`.
    - Val: B4 0.126382, ROUGE_L 0.337050, B4+Rouge 0.463432.
@@ -283,11 +283,11 @@ Problem:
 - The model did not learn to copy/fuse the oracle candidate despite seeing top-20 reports.
 - Long retrieved context plus long report generation appears too hard/unstable for this small dataset.
 
-### 6. R2GenGPT conditional log-prob candidate selection
+### 6. MRG model conditional log-prob candidate selection
 
 Method:
 - Used the copy-oracle SFT checkpoint.
-- At inference, scored each retrieved candidate report by conditional average token log-prob under R2GenGPT with the same top-20 context.
+- At inference, scored each retrieved candidate report by conditional average token log-prob under the current MRG model with the same top-20 context.
 - Selected the highest log-prob candidate instead of free-generating.
 
 Result:
@@ -301,7 +301,7 @@ Problem:
 ### 7. Candidate-number SFT
 
 Method:
-- Added configurable `--retrieval_instruction` to R2GenGPT so retrieval prompts can ask for candidate selection instead of report generation.
+- Added configurable `--retrieval_instruction` to the MRG model wrapper so retrieval prompts can ask for candidate selection instead of report generation.
 - Built `data/iu_xray/annotation_rag_top20_number_cw1.json`.
 - Train target became only the oracle candidate number (`1 .` to `20 .`).
 - Inference generated a number, parsed it, and copied that retrieved report.
@@ -320,7 +320,7 @@ Problem:
 The candidate oracle proves that target scores are attainable if the right retrieved report is selected. However, every deployable selector tried so far fails:
 - DINO-only selectors lack clinical/semantic alignment.
 - Frozen BERT text embeddings plus DINO image embeddings are not enough.
-- R2GenGPT does not reliably use long top-k retrieved context for selection, even when the target is only a number.
+- The current MRG model does not reliably use long top-k retrieved context for selection, even when the target is only a number.
 
 Most likely next improvement:
 - Replace DINO-only retrieval/reranking with a radiology image-text aligned retriever/reranker.

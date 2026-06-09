@@ -1,7 +1,7 @@
 # Checkpoints Not Included
 
-Large model weight files were intentionally excluded from this GitHub-ready core pack.
-They remain on the remote server under the source project path.
+Large model weight files were intentionally excluded from this GitHub-ready MRG_RL experiment package.
+They remain on the remote server under the historical experiment workspace path.
 
 | Size | Path |
 | ---: | --- |

@@ -1,7 +1,7 @@
-# IU X-Ray R2GenGPT 试错复盘：SFT / DPO / 检索重排
+# IU X-Ray MRG_RL 试错复盘：SFT / DPO / 检索重排
 
 日期：2026-06-09  
-项目路径：`/data/wang.xuanmin/R2GenGPT`  
+历史远端工作路径：`/data/wang.xuanmin/R2GenGPT`  
 当前目标：不再关注 CIDEr，主要提升 `Bleu_4` 和 `ROUGE_L`。
 
 目标值：
@@ -380,7 +380,7 @@ checkpoint:
 - 仍显著低于最佳 SFT 生成模型。
 - 它更像是在学“哪条候选报告通常好”，不是在理解当前图像。
 
-### 10.3 R2GenGPT image-conditioned log-likelihood selector
+### 10.3 MRG model image-conditioned log-likelihood selector
 
 方法：
 
@@ -404,7 +404,7 @@ val 结果：
 问题：
 
 - 比 scalar reranker 差。
-- 说明当前 R2GenGPT 虽然能生成通用报告，但还不是一个可靠的候选报告判别器。
+- 说明当前 MRG 模型虽然能生成通用报告，但还不是一个可靠的候选报告判别器。
 - val 已经明显不佳，因此 test 提前停止，避免浪费 GPU 时间。
 
 ## 11. 总体问题分析
@@ -478,7 +478,7 @@ val 结果：
 
 更强方案：
 
-- 用当前 R2GenGPT 的 visual tokens + candidate report tokens 做 cross-encoder。
+- 用当前 MRG 模型的 visual tokens + candidate report tokens 做 cross-encoder。
 - 训练目标是 top20 candidate 的 B4/Rouge reward。
 - 推理时对 top20 逐条打分。
 
@@ -620,11 +620,11 @@ Problem:
 - The model did not learn to copy/fuse the oracle candidate despite seeing top-20 reports.
 - Long retrieved context plus long report generation appears too hard/unstable for this small dataset.
 
-### 6. R2GenGPT conditional log-prob candidate selection
+### 6. MRG model conditional log-prob candidate selection
 
 Method:
 - Used the copy-oracle SFT checkpoint.
-- At inference, scored each retrieved candidate report by conditional average token log-prob under R2GenGPT with the same top-20 context.
+- At inference, scored each retrieved candidate report by conditional average token log-prob under the current MRG model with the same top-20 context.
 - Selected the highest log-prob candidate instead of free-generating.
 
 Result:
@@ -638,7 +638,7 @@ Problem:
 ### 7. Candidate-number SFT
 
 Method:
-- Added configurable `--retrieval_instruction` to R2GenGPT so retrieval prompts can ask for candidate selection instead of report generation.
+- Added configurable `--retrieval_instruction` to the MRG model wrapper so retrieval prompts can ask for candidate selection instead of report generation.
 - Built `data/iu_xray/annotation_rag_top20_number_cw1.json`.
 - Train target became only the oracle candidate number (`1 .` to `20 .`).
 - Inference generated a number, parsed it, and copied that retrieved report.
@@ -657,7 +657,7 @@ Problem:
 The candidate oracle proves that target scores are attainable if the right retrieved report is selected. However, every deployable selector tried so far fails:
 - DINO-only selectors lack clinical/semantic alignment.
 - Frozen BERT text embeddings plus DINO image embeddings are not enough.
-- R2GenGPT does not reliably use long top-k retrieved context for selection, even when the target is only a number.
+- The current MRG model does not reliably use long top-k retrieved context for selection, even when the target is only a number.
 
 Most likely next improvement:
 - Replace DINO-only retrieval/reranking with a radiology image-text aligned retriever/reranker.
